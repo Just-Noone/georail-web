@@ -1,0 +1,14 @@
+{
+  "name": "georail",
+  "version": "1.0.0",
+  "description": "GeoRail, welcome to the peak of MTR",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http": "^0.0.1-security"
+  }
+}

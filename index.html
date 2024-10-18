@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>GeoRail</title>
+        <link rel="icon" type="image/x-icon" href="/assets/img/icon.png">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css" integrity="sha512-8BU3emz11z9iF75b10oPjjpamM4Mz23yQFQymbtwyPN3mNWHxpgeqyrYnkIUP6A8KyAj5k2p3MiYLtYqew7gIw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/assets/css/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="script" href="/assets/js/home_image.js">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body id="#">
+
+        <!-- > WEBSITE LOADER <-->
+
+        <div class="loader_main" id="preloader_main">
+        <div class="container">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+
+          <p style="color: white; padding: 20px;">LOADING</p>
+        </div>
+          
+        
+
+        <!-- >Menu< -->
+
+        <div class="nav_cont_1" id="menuframe">
+            <div class="nav_main_frame">
+                <div class="nav_logo_sideb">
+                    <a href="/index.html" class="nav_link_logo"><img src="/assets/img/logo.png" alt="LOGO" class="nav_logo"></a>
+                    </div>
+                <div class="nav_text_0">
+                    <a href="#" rel="preconnect" class="nav_link_text"><p>Home</p></a>
+                    <a href="#about" class="nav_link_text"><p>About</p></a>
+                    <a href="/system.html" class="nav_link_text"><p>System</p></a>
+                    <a href="/map.html" class="nav_link_text"><p>Map</p></a>
+
+                </div>
+
+                <div class="mobilemenu">
+                    <a href="#" id="toggleLink" class="nav_mobile_men">
+                        <i class="fa-solid fa-bars" class="nav_mobile_men" style="color: white;"></i>
+                    </a>
+                </div>
+
+                <div class="nav_mob_menu_frame">
+                    <div class="nav_text_0">
+                        <a href="/index.html" class="nav_link_text_mob"><p>Home</p></a>
+                        <a href="/about.html" class="nav_link_text_mob"><p>About</p></a>
+                        <a href="/index.html" class="nav_link_text_mob"><p>System</p></a>
+                        <a href="/index.html" class="nav_link_text_mob"><p>Map</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- >Hero< -->
+
+        <div class="hro_main_cont">
+
+            <div class="hro_text_cont_">
+                <p class="hro_text_mask">GeoRail</p>
+                <p class="hro_text_subtitle">MTR at its finest</p>
+            </div>
+            <div class="hro_backdrop_main_mask">
+            </div>
+            <div class="hro_backdrop_main" id="hro_backdrop_main">
+
+
+                <script>
+                    // Array of image filenames
+                    const images = [
+                      'BitOneVladimirskaya.png',
+                      'DaveTobolsk.png',
+                      'DaveTobolsk2.png',
+                      'JachCenter.png',
+                      'VitorMtAbraham.png'
+                    ];
+                
+                    // Function to select a random image
+                    function getRandomImage() {
+                      const randomIndex = Math.floor(Math.random() * images.length);
+                      return images[randomIndex];
+                    }
+                
+                    // Set the background image of the element with ID "hro_backdrop_main"
+                    const imagePath = '/assets/img/' + getRandomImage();
+                    document.getElementById('hro_backdrop_main').style.backgroundImage = `url(${imagePath})`;
+                  </script>
+            </div>
+
+            <div class="hro_backdrop_bubble_frame">
+                
+            <div class="hro_bubble1" class="hro_bubble"></div>
+            <div class="hro_bubble2" class="hro_bubble"></div>
+            <div class="hro_bubble3" class="hro_bubble"></div>
+            <div class="hro_bubble4" class="hro_bubble"></div>
+            <div class="hro_bubble5" class="hro_bubble"></div>
+            </div>
+        </div>
+
+        <!-- >About< -->
+
+        <div class="abt_main_cont" id="about">
+            <div class="abt_text_cont">
+                <h1 class="abt_main_header">About us</h1>
+
+                <div class="abt_text_splits">
+
+                <div class="abt_text_leftsplit">
+
+                    <div class="abt_left_image"></div>
+
+                </div>
+
+                <div class="abt_text_rightsplit">
+
+                    <p>
+                        GeoRail is a dedicated Minecraft server that was launched in early February 2024, with the vision of creating a thriving community centered around the construction of expansive rail networks and complex structures within a richly detailed world. From the outset, the server attracted a growing community of passionate builders and adventurers eager to leave their mark on the GeoRail universe.
+                        <div style="width: 100%; height: 5px;"></div>
+                        However, the journey was not without its challenges. After months of development and community engagement, the server experienced significant disruptions in late May. A few members joined with malicious intent, causing widespread destruction that severely impacted the server's infrastructure. To make matters worse, the world suffered from corruption, forcing a complete reset of the server.
+                        <div style="width: 100%; height: 5px;"></div>
+                        Faced with these difficulties, the server's owner, JusttNoone, made the tough decision to temporarily shut down GeoRail in mid-June 2024. But this was far from the end. Driven by a commitment to preserving the spirit of the project, JusttNoone took the time to rebuild GeoRail from the ground up, this time with a focus on security, stability, and fostering a close-knit community.
+                        <div style="width: 100%; height: 5px;"></div>
+                        GeoRail has now been relaunched as a private server, open only to trusted members and skilled builders who share a commitment to creativity, collaboration, and respect for the community. The server is stronger than ever, offering a rich and immersive experience where every creation is a testament to the dedication of its members.
+                        <div style="width: 100%; height: 5px;"></div>
+                        Welcome to GeoRail, where your imagination and craftsmanship can thrive in a world built on trust and shared passion.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Cities -->
+
+        background-color: #000000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect fill='none' stroke-width='95.4' id='a' x='-400' y='-300' width='800' height='600'/%3E%3C/defs%3E%3Cg transform='scale(0.811)' style='transform-origin:center'%3E%3Cg style='transform-origin:center'%3E%3Cg transform='' style='transform-origin:center'%3E%3Cg transform='translate(1000 750)'%3E%3Cuse stroke='%23FF00B0' href='%23a' transform=''/%3E%3Cuse stroke='%23ff02b5' href='%23a' transform=''/%3E%3Cuse stroke='%23ff04bb' href='%23a' transform=''/%3E%3Cuse stroke='%23ff06c0' href='%23a' transform=''/%3E%3Cuse stroke='%23ff08c5' href='%23a' transform=''/%3E%3Cuse stroke='%23ff0aca' href='%23a' transform=''/%3E%3Cuse stroke='%23ff0cd0' href='%23a' transform=''/%3E%3Cuse stroke='%23ff0ed5' href='%23a' transform=''/%3E%3Cuse stroke='%23ff10da' href='%23a' transform=''/%3E%3Cuse stroke='%23ff12df' href='%23a' transform=''/%3E%3Cuse stroke='%23ff14e5' href='%23a' transform=''/%3E%3Cuse stroke='%23ff16ea' href='%23a' transform=''/%3E%3Cuse stroke='%23ff18ef' href='%23a' transform=''/%3E%3Cuse stroke='%23ff1af4' href='%23a' transform=''/%3E%3Cuse stroke='%23ff1cfa' href='%23a' transform=''/%3E%3Cuse stroke='%23FF1EFF' href='%23a' transform=''/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+
+        <!-- Scripts-->
+
+        <script>
+            var loader = document.getElementById("preloader_main");
+            
+            window.addEventListener("load", function(){
+            loader.style.opacity = "0";
+            loader.style.pointerEvents = "none";
+            
+            })
+            
+            </script>
+
+    </body>
+</html>
