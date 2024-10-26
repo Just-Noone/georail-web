@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
     const images = [
-        '/assets/img/avotovo.png',
-        '/assets/img/forest-damaia.png',
-        '/assets/img/geostar.png',
-        '/assets/img/jachowice-c.png',
-        '/assets/img/jachowice-miłoszczowo.png',
-        '/assets/img/jachowice-stare-miasto.png',
-        '/assets/img/forest.png',
-        '/assets/img/spawn.png',
-        '/assets/img/tobolsk.png',
-        '/assets/img/trahan.png'
+        '/assets/img/avotovo.jpeg',
+        '/assets/img/forest-damaia.jpeg',
+        '/assets/img/geostar.jpeg',
+        '/assets/img/jachowice-c.jpeg',
+        '/assets/img/jachowice-miłoszczowo.jpeg',
+        '/assets/img/jachowice-stare-miasto.jpeg',
+        '/assets/img/forest.jpeg',
+        '/assets/img/spawn.jpeg',
+        '/assets/img/tobolsk.jpeg',
+        '/assets/img/trahan.jpeg'
     ];
 
     let currentIndex = 0;
