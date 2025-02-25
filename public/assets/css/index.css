@@ -21,7 +21,7 @@
     --secondary : #F2A310;
     --tertiary : #3457CA;
     --primary-gradient : linear-gradient(120deg, #FFBC40, #F2A310);
-    --announcement-banner-gradient : linear-gradient(90deg, #C12345, #F2A310); 
+    --announcement-banner-gradient : linear-gradient(90deg, #C12345, #C73C29); 
     --accent-header : linear-gradient(120deg, #CA3470, #F2A310);
 
     --background-dark : 1;
@@ -32,6 +32,7 @@ body {
     background: var(--background);
     font-family: 'Sofia Pro', sans-serif;
     transition: all 0.5s;
+  overflow-x: hidden;
 }
 
 html {
@@ -340,11 +341,82 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   z-index: 1;
   position: absolute;
   top: 2rem;
   left: 2rem;
-  width: 100%;
+  width: fit-content;
   height: 100%;
+  margin-left: 2rem;
+}
+
+.hero_button_about{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 1rem 5rem;
+  border-radius: 10000px;
+  border: none;
+  background: var(--primary-gradient);
+  color: var(--white);
+  transition: 0.5s all;
+  outline: none;
+  cursor: pointer;
+}
+
+.hero_button_about:hover{
+  padding: 1rem 6.5rem;
+}
+
+.hero_banter{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  text-decoration: none;
+  margin: 0 0 15px 0;
+  color: var(--white);
+  transition: 0.5s all;
+}
+
+.hero_subtitle{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 350;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--white);
+  transition: 0.5s all;
+}
+
+.hero_announcement{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--white);
+  transition: 0.5s all;
+  text-align: center;
+  background: var(--announcement-banner-gradient);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  padding: 1rem 0;
+}
+
+.hero_announcement_text{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 700;
+}
+
+.hero_announcement_close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
 }

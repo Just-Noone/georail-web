@@ -21,7 +21,7 @@
 </head>
 <body>
 
-  /* Nav Bar */
+
 
   <div class="nav_container">
     <div class="nav_main">
@@ -54,20 +54,29 @@
 
   </div>
 
-  /* Hero */
+ 
 
   <div class="hero">
-
-    <div class="hero_foreground">
-      <p class="hero_subtitle">MTR</p>
-      <p class="hero_banter">At its finest</p>
-
-      <button class="hero_button_about">About</button>
     <div class="background">
       <img src="/public/assets/img/hero-dark.png" alt="BG-d" class="hero_background-dark" loading="lazy">
       <img src="/public/assets/img/hero-light.png" alt="BG-d" class="hero_background-light" loading="lazy">
     </div>
 
+    <div class="hero_foreground">
+      <p class="hero_subtitle" id="hero_title1">MTR</p>
+      <p class="hero_banter" id="hero_title2">At its finest</p>
+
+      <button class="hero_button_about" id="hero_about">About</button>
+
+    </div>
+
+    <div class="hero_announcement">
+      <p class="hero_announcement_text">Important announcement</p>
+      <p>The server is currently closed! The server might be back by mid March-April</p>
+      <button class="hero_announcement_close">
+        <i class="fa-solid fa-xmark" style="color: white;"></i>
+      </button>
+    </div>
 
   </div>
 
@@ -116,5 +125,14 @@
   </footer>
   <script src="/public/assets/js/translate.js?v=1.0"></script>
   <script src="/public/assets/js/themeswitch.js"></script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CEMCD839LN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CEMCD839LN');
+</script>
 </body>
 </html>

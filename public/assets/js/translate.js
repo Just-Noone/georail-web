@@ -46,6 +46,9 @@ const setLanguage = (language) => {
   document.getElementById("nav_discord").textContent = translation.nav_discord;
   document.getElementById("nav_cities").textContent = translation.nav_cities;
   document.getElementById("nav_railways").textContent = translation.nav_railways;
+  document.getElementById("hero_title1").textContent = translation.hero_title1;
+  document.getElementById("hero_title2").textContent = translation.hero_title2;
+  document.getElementById("hero_about").textContent = translation.hero_about;
 };
 
 // Event listener for the language selector

@@ -1,8 +1,8 @@
 const root = document.documentElement;
 const toggleSwitch = document.getElementById('toggleSwitch');
 
-toggleSwitch.addEventListener('change', () => {
-  if (toggleSwitch.checked) {
+// Function to apply light mode
+function applyLightMode() {
     root.style.setProperty('--background', '#ffffff');
     root.style.setProperty('--background-secondary', '#ECECEC');
     root.style.setProperty('--black', '#000000');
@@ -17,8 +17,10 @@ toggleSwitch.addEventListener('change', () => {
     root.style.setProperty('--background-dark', '0');
     root.style.setProperty('--background-light', '1');
     root.style.setProperty('--nav-text', '#F2A310');
-  } else {
-    // Switch to Dark Mode
+}
+
+// Function to apply dark mode
+function applyDarkMode() {
     root.style.setProperty('--background', '#0f0f0f');
     root.style.setProperty('--background-secondary', '#1E1E1E');
     root.style.setProperty('--black', '#000000');
@@ -33,5 +35,25 @@ toggleSwitch.addEventListener('change', () => {
     root.style.setProperty('--background-dark', '1');
     root.style.setProperty('--background-light', '0');
     root.style.setProperty('--nav-text', '#ffffff');
-  }
+}
+
+// Load saved switch state from localStorage
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+    toggleSwitch.checked = true;
+    applyLightMode();
+} else {
+    toggleSwitch.checked = false;
+    applyDarkMode();
+}
+
+// Toggle switch event listener
+toggleSwitch.addEventListener('change', () => {
+    if (toggleSwitch.checked) {
+        applyLightMode();
+        localStorage.setItem('theme', 'light');
+    } else {
+        applyDarkMode();
+        localStorage.setItem('theme', 'dark');
+    }
 });

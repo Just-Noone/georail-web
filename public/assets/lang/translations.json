@@ -7,7 +7,10 @@
       "nav_joininstructions": "How to join?",
       "nav_discord": "Discord",
       "nav_cities": "Cities",
-      "nav_railways": "Railways"
+      "nav_railways": "Railways",
+      "hero_title1": "MTR",
+      "hero_title2": "At its finest",
+      "hero_about": "About"
     },
     "pl": {
       "nav_about": "O nas",
@@ -17,7 +20,10 @@
       "nav_joininstructions": "Jak dołączyć?",
       "nav_discord": "Discord",
       "nav_cities": "Miasta",
-      "nav_railways": "Linie Kolejowe"
+      "nav_railways": "Linie Kolejowe",
+      "hero_title1": "MTR",
+      "hero_title2": "W najlepszym wykonaniu",
+      "hero_about": "O nas"
     }
   }
   
