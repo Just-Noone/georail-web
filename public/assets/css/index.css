@@ -57,6 +57,10 @@ html {
     scale: 75%;
   }
   
+  .toggle-switch:hover {
+    scale: 0.85;
+  }
+
   .switch-label {
     position: absolute;
     width: 100%;
@@ -137,19 +141,6 @@ html {
     background-color: var(--black);
   }
 
-  .hero_foreground{
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-  }
-  
 
   /**Footer**/
 
@@ -334,7 +325,26 @@ html {
   text-decoration: none;
 }
 
+.nav_link:hover{
+  scale: 1.05;
+  transition: 0.5s all;
+}
+
+
 .discord_nav:hover{
   color: #7289da;
   transition: 0.5s all;
+}
+
+.hero_foreground{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 100%;
+  height: 100%;
 }

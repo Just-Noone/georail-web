@@ -1,47 +1,60 @@
-// Function to load translation from JSON file
-async function loadTranslations(language) {
+let translations = {};
+
+// Function to fetch the translations from the JSON file
+const loadTranslations = async () => {
+  try {
+    const response = await fetch('/public/assets/lang/translations.json');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    translations = await response.json();
+    console.log('Translations loaded:', translations); // Check if translations are loaded
+  } catch (error) {
+    console.error('Error loading translations:', error);
+  }
+
+  const loadTranslations = async () => {
     try {
-      const response = await fetch(`/public/assets/lang/${language}.json`);
+      console.log('Attempting to fetch translations...');  // Add this line
+      const response = await fetch('/public/assets/lang/translations.json');
       if (!response.ok) {
-        throw new Error("Could not load translation file");
+        throw new Error('Network response was not ok');
       }
-      const data = await response.json();
-      return data;
+      translations = await response.json();
+      console.log('Translations loaded:', translations);  // Log the fetched translations
     } catch (error) {
-      console.error("Error fetching translations:", error);
-      return {};
+      console.error('Error loading translations:', error);  // Log any errors
     }
+  };
+  
+};
+
+// Function to set the language and update the text content
+const setLanguage = (language) => {
+  if (!translations[language]) {
+    console.error(`Translations for language ${language} not found`);
+    return;
   }
-  
-  // Function to change the website language
-  async function changeLanguage() {
-    const selectedLang = document.getElementById("languageSelect").value;
-    const translations = await loadTranslations(selectedLang);
-  
-    // Get the text elements
-    const hero_subtitle = document.getElementById("hero_sub");
-    const hero_title = document.getElementById("hero_title");
-  
-    // Only update the text if the elements exist
-    if (hero_subtitle && hero_title) {
-      hero_subtitle.innerText = translations.greeting || "Translation missing";
-      hero_title.innerText = translations.welcome_message || "Translation missing";
-    }
-  
-    // Save language preference in localStorage
-    localStorage.setItem('preferredLanguage', selectedLang);
-  }
-  
-  // Load default language on page load
-  document.addEventListener("DOMContentLoaded", async () => {
-    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-    const languageSelect = document.getElementById("languageSelect");
-  
-    if (languageSelect) {
-      languageSelect.value = savedLang;
-      await changeLanguage();
-    } else {
-      console.error("Language select element not found");
-    }
-  });
-  
+
+  const translation = translations[language];
+
+  document.getElementById("nav_about").textContent = translation.nav_about;
+  document.getElementById("nav_server").textContent = translation.nav_server;
+  document.getElementById("nav_dynmap").textContent = translation.nav_dynmap;
+  document.getElementById("nav_sysmap").textContent = translation.nav_sysmap;
+  document.getElementById("nav_joininstructions").textContent = translation.nav_joininstructions;
+  document.getElementById("nav_discord").textContent = translation.nav_discord;
+  document.getElementById("nav_cities").textContent = translation.nav_cities;
+  document.getElementById("nav_railways").textContent = translation.nav_railways;
+};
+
+// Event listener for the language selector
+document.getElementById("languageSelect").addEventListener("change", (event) => {
+  setLanguage(event.target.value);
+});
+
+// Load translations when the page loads and set the default language
+window.addEventListener('load', async () => {
+  await loadTranslations();
+  setLanguage(document.getElementById("languageSelect").value); // Set the default selected language
+});

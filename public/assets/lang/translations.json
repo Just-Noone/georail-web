@@ -1,0 +1,23 @@
+{
+    "en": {
+      "nav_about": "About",
+      "nav_server": "Server",
+      "nav_dynmap": "Dynmap",
+      "nav_sysmap": "System map",
+      "nav_joininstructions": "How to join?",
+      "nav_discord": "Discord",
+      "nav_cities": "Cities",
+      "nav_railways": "Railways"
+    },
+    "pl": {
+      "nav_about": "O nas",
+      "nav_server": "Serwer",
+      "nav_dynmap": "Mapa",
+      "nav_sysmap": "Mapa systemu",
+      "nav_joininstructions": "Jak dołączyć?",
+      "nav_discord": "Discord",
+      "nav_cities": "Miasta",
+      "nav_railways": "Linie Kolejowe"
+    }
+  }
+  

@@ -21,50 +21,53 @@
 </head>
 <body>
 
+  /* Nav Bar */
+
   <div class="nav_container">
     <div class="nav_main">
       <div class="nav_content">
         <li><img src="/public/assets/img/Geo.svg" alt="logo" class="nav_logo"><a href="/public/index.html" class="nav_logo_text">GeoRail</a></li>
         <li><div class="nav_divider"></div></li>
-        <li><a href="/public/index.html#about" class="nav_link">About</a></li>
+        <li><a href="/public/index.html#about" class="nav_link" id="nav_about">About</a></li>
         <li class="nav_dropdown_main">
-          <a href="#" class="nav_link">Server <i class="fa-solid fa-caret-down"></i> </a>
+          <a href="#" class="nav_link" id="nav_server">Server <i class="fa-solid fa-caret-down" style="transition: 0s all;"></i> </a>
             <ul class="nav_dropdown">
 
-              <li><a href="/public/dynmap.html" class="nav_link">Dynmap</a></li>
-              <li><a href="/public/system.html" class="nav_link">System map</a></li>
-              <li><a href="/public/join.html" class="nav_link">How to join?</a></li>
-              <li><a href="https://discord.gg/hNnkANUz8S" class="nav_link">Discord</a></li>
+              <li><a href="/public/dynmap.html" class="nav_link" id="nav_dynmap">Dynmap</a></li>
+              <li><a href="/public/system.html" class="nav_link" id="nav_sysmap">System map</a></li>
+              <li><a href="/public/join.html" class="nav_link" id="nav_joininstructions">How to join?</a></li>
+              <li><a href="https://discord.gg/hNnkANUz8S" class="nav_link" id="nav_discord">Discord</a></li>
 
             </ul>
           
         </li>
 
         <li>
-          <a href="/public/cities.html" class="nav_link">Cities</a>
+          <a href="/public/cities.html" class="nav_link" id="nav_cities">Cities</a>
         </li>
 
         <li>
-          <a href="/public/railways.html" class="nav_link">Railways</a>
+          <a href="/public/railways.html" class="nav_link" id="nav_railways">Railways</a>
         </li>
       </div>
     </div>
 
   </div>
 
+  /* Hero */
+
   <div class="hero">
+
+    <div class="hero_foreground">
+      <p class="hero_subtitle">MTR</p>
+      <p class="hero_banter">At its finest</p>
+
+      <button class="hero_button_about">About</button>
     <div class="background">
       <img src="/public/assets/img/hero-dark.png" alt="BG-d" class="hero_background-dark" loading="lazy">
       <img src="/public/assets/img/hero-light.png" alt="BG-d" class="hero_background-light" loading="lazy">
     </div>
 
-    <div class="hero_foreground">
-
-      <div class="hero_text">
-        <h1 class="hero_sub" id="hero_mtr">MTR</h1>
-        <p class="hero_title" id="hero_title">At its finest</p>
-        <button class="hero_button" id="hero_button">Join GeoRail</button>
-    </div>
 
   </div>
 
@@ -81,7 +84,7 @@
     <div class="footer_bottom_als">
 
       <div class="language_select">
-        <select class="lang_select_main" id="languageSelect" onchange="changeLanguage()">
+        <select id="languageSelect" class="lang_select_main">
           <option value="en">English</option>
           <option value="es">español</option>
           <option value="cn">中国人</option>
@@ -111,7 +114,7 @@
 
     </div>
   </footer>
-  <script src="/public/assets/js/translate.js"></script>
+  <script src="/public/assets/js/translate.js?v=1.0"></script>
   <script src="/public/assets/js/themeswitch.js"></script>
 </body>
 </html>
