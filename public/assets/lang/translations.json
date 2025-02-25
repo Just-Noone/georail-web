@@ -10,7 +10,9 @@
       "nav_railways": "Railways",
       "hero_title1": "MTR",
       "hero_title2": "At its finest",
-      "hero_about": "About"
+      "hero_about": "About",
+      "hero_ann_title" : "Important announcement",
+      "hero_ann_sub" : "The server is currently closed! The server might be back by mid March-April"
     },
     "pl": {
       "nav_about": "O nas",
@@ -23,7 +25,9 @@
       "nav_railways": "Linie Kolejowe",
       "hero_title1": "MTR",
       "hero_title2": "W najlepszym wykonaniu",
-      "hero_about": "O nas"
+      "hero_about": "O nas",
+      "hero_ann_title" : "Ważne ogłoszenie",
+      "hero_ann_sub" : "Serwer jest chwilowo zamknięty ! Serwer może powrócić w połowie marca lub kwietnia"
     }
   }
   

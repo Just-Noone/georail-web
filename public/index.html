@@ -16,10 +16,11 @@
     The GeoRail server features a various spectre of styles. From Asian to European. We are
     welcoming everybody. ">
     <meta name="twitter:image" content="/public/assets/img/Geo.png">
+    
     <meta name="twitter:card" content="/public/assets/img/BannerNew.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body id="body">
 
 
 
@@ -70,14 +71,34 @@
 
     </div>
 
-    <div class="hero_announcement">
-      <p class="hero_announcement_text">Important announcement</p>
-      <p>The server is currently closed! The server might be back by mid March-April</p>
-      <button class="hero_announcement_close">
+    <div class="hero_announcement" id="hero_announcement">
+      <p class="hero_announcement_text" id="hero_announcement_title">Important announcement</p>
+      <p id="hero_announcement_text">The server is currently closed! The server might be back by mid March-April</p>
+      <button class="hero_announcement_close" id="hero_announcement_close">
         <i class="fa-solid fa-xmark" style="color: white;"></i>
       </button>
     </div>
 
+  </div>
+
+  <div class="loader_screen" id="loading-screen">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/bouncy.js"></script>
+
+<l-bouncy
+  size="45"
+  speed="1.75"
+  color="white" 
+></l-bouncy>
+
+<script>
+  // Remove loading screen after all assets are loaded
+  window.addEventListener('load', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    const content = document.getElementById('body');
+    loadingScreen.style.display = 'none';  // Hide loading screen
+    content.style.display = 'block';       // Show content
+  });
+</script>
   </div>
 
   <footer class="footer_main">
@@ -87,6 +108,7 @@
       <div class="footer_top_geo">
         <p class="GeoFooter">GEORAIL</p>
       </div>      
+    
     
 
 
@@ -125,6 +147,7 @@
   </footer>
   <script src="/public/assets/js/translate.js?v=1.0"></script>
   <script src="/public/assets/js/themeswitch.js"></script>
+  <script src="/public/assets/js/fade.js"></script>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CEMCD839LN"></script>
 <script>

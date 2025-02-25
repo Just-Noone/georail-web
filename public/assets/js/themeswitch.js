@@ -12,7 +12,7 @@ function applyLightMode() {
     root.style.setProperty('--secondary', '#F2A310');
     root.style.setProperty('--tertiary', '#3457CA');
     root.style.setProperty('--primary-gradient', 'linear-gradient(120deg, #FFBC40, #F2A310)');
-    root.style.setProperty('--announcement-banner-gradient', 'linear-gradient(90deg, #C12345, #F2A310)');
+    root.style.setProperty('--announcement-banner-gradient', 'linear-gradient(90deg, #C12345, #C73C29)');
     root.style.setProperty('--accent-header', 'linear-gradient(120deg, #CA3470, #F2A310)');
     root.style.setProperty('--background-dark', '0');
     root.style.setProperty('--background-light', '1');
@@ -30,7 +30,7 @@ function applyDarkMode() {
     root.style.setProperty('--secondary', '#F2A310');
     root.style.setProperty('--tertiary', '#3457CA');
     root.style.setProperty('--primary-gradient', 'linear-gradient(120deg, #FFBC40, #F2A310)');
-    root.style.setProperty('--announcement-banner-gradient', 'linear-gradient(90deg, #C12345, #F2A310)');
+    root.style.setProperty('--announcement-banner-gradient', 'linear-gradient(90deg, #C12345, #C73C29)');
     root.style.setProperty('--accent-header', 'linear-gradient(120deg, #CA3470, #F2A310)');
     root.style.setProperty('--background-dark', '1');
     root.style.setProperty('--background-light', '0');
