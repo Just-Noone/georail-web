@@ -12,7 +12,8 @@
       "hero_title2": "At its finest",
       "hero_about": "About",
       "hero_ann_title" : "Important announcement",
-      "hero_ann_sub" : "The server is currently closed! The server might be back by mid March-April"
+      "hero_ann_sub" : "The server is currently closed! The server might be back by mid March-April",
+      "cookies_text" : "We use Cookies for statistics, like how much and when our website was used as well as for outage tracking. Those cookies are required for the website to function."
     },
     "pl": {
       "nav_about": "O nas",
@@ -27,7 +28,24 @@
       "hero_title2": "W najlepszym wykonaniu",
       "hero_about": "O nas",
       "hero_ann_title" : "Ważne ogłoszenie",
-      "hero_ann_sub" : "Serwer jest chwilowo zamknięty ! Serwer może powrócić w połowie marca lub kwietnia"
+      "hero_ann_sub" : "Serwer jest chwilowo zamknięty ! Serwer może powrócić w połowie marca lub kwietnia",
+      "cookies_text" : "Używamy plików cookie do celów statystycznych, takich jak to, jak często i kiedy nasza strona była używana, a także do śledzenia przerw w działaniu. Te pliki cookies są niezbędne do działania witryny."
+    },
+    "ru": {
+      "nav_about": "О нас",
+      "nav_server": "Сервер",
+      "nav_dynmap": "Карта мира",
+      "nav_sysmap": "Схема маршрутов",
+      "nav_joininstructions": "Как присоединиться?",
+      "nav_discord": "Дискорд",
+      "nav_cities": "Города",
+      "nav_railways": "Железные дороги",
+      "hero_title1": "MTR",
+      "hero_title2": "В лучшем виде",
+      "hero_about": "О нас",
+      "hero_ann_title" : "Важные объявления",
+      "hero_ann_sub" : "Сервер временно закрыт! Сервер может быть вернется в середине Марта - Апреля",
+      "cookies_text" : "Мы используем фалы cookie для статистики, например для определения частоты и времени посещаемости нашего сайта, а также для мониторинга сбоев в работе. Данные файлы необходимы для правильной работы сайта"
     }
   }
   

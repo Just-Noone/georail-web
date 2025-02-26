@@ -51,6 +51,7 @@ const setLanguage = (language) => {
   document.getElementById("hero_about").textContent = translation.hero_about;
   document.getElementById("hero_announcement_title").textContent = translation.hero_ann_title;
   document.getElementById("hero_announcement_text").textContent = translation.hero_ann_sub;
+  document.getElementById("cookies_text").textContent = translation.cookies_text;
 };
 
 // Event listener for the language selector
