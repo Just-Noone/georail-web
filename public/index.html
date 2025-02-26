@@ -22,7 +22,16 @@
 </head>
 <body id="body">
 
+  <!--Cookies banner-->
 
+  <div class="main_cookies" id="cookie_frame">
+    <div class="cookies_content">
+      <p class="cookies_text" id="cookies_text">We use Cookies for statistics, like how much and when our website was used as well as for outage tracking. Those cookies are required for the website to function. </p>
+      <button class="cookies_button" id="cookies_close">Accept</button>
+    </div>
+  </div>
+
+ <!--Navbar-->
 
   <div class="nav_container">
     <div class="nav_main">
@@ -55,7 +64,7 @@
 
   </div>
 
- 
+ <!--Hero-->
 
   <div class="hero">
     <div class="background">
@@ -81,25 +90,35 @@
 
   </div>
 
+  <!--About section-->
+
+  <div class="about">
+    <div class="about_content">
+  </div>
+
+  <!--Loading screen-->
+
   <div class="loader_screen" id="loading-screen">
     <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/bouncy.js"></script>
 
-<l-bouncy
-  size="45"
-  speed="1.75"
-  color="white" 
-></l-bouncy>
+    <l-bouncy
+        size="65"
+        speed="1.75"
+        color="white" 
+    ></l-bouncy>
 
-<script>
-  // Remove loading screen after all assets are loaded
-  window.addEventListener('load', function() {
-    const loadingScreen = document.getElementById('loading-screen');
-    const content = document.getElementById('body');
-    loadingScreen.style.display = 'none';  // Hide loading screen
-    content.style.display = 'block';       // Show content
-  });
-</script>
+    <script>
+      // Remove loading screen after all assets are loaded
+      window.addEventListener('load', function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        const content = document.getElementById('body');
+        loadingScreen.style.display = 'none';  // Hide loading screen
+        content.style.display = 'block';       // Show content
+      });
+    </script>
   </div>
+
+  <!--Footer-->
 
   <footer class="footer_main">
 
@@ -145,17 +164,22 @@
 
     </div>
   </footer>
+
+
+
+  <!-- JavaScript -->
+
   <script src="/public/assets/js/translate.js?v=1.0"></script>
   <script src="/public/assets/js/themeswitch.js"></script>
   <script src="/public/assets/js/fade.js"></script>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CEMCD839LN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CEMCD839LN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-CEMCD839LN');
-</script>
+    gtag('config', 'G-CEMCD839LN');
+  </script>
 </body>
 </html>

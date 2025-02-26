@@ -5,6 +5,7 @@ const toggleSwitch = document.getElementById('toggleSwitch');
 function applyLightMode() {
     root.style.setProperty('--background', '#ffffff');
     root.style.setProperty('--background-secondary', '#ECECEC');
+    root.style.setProperty('--background-tertiary', '#cfcfcf');
     root.style.setProperty('--black', '#000000');
     root.style.setProperty('--text', '#000000');
     root.style.setProperty('--text2', '#717171');
@@ -17,12 +18,14 @@ function applyLightMode() {
     root.style.setProperty('--background-dark', '0');
     root.style.setProperty('--background-light', '1');
     root.style.setProperty('--nav-text', '#F2A310');
+
 }
 
 // Function to apply dark mode
 function applyDarkMode() {
     root.style.setProperty('--background', '#0f0f0f');
     root.style.setProperty('--background-secondary', '#1E1E1E');
+    root.style.setProperty('--background-tertiary', '#3e3e3e');
     root.style.setProperty('--black', '#000000');
     root.style.setProperty('--text', '#ffffff');
     root.style.setProperty('--text2', '#ffffff');
