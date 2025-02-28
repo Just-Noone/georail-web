@@ -539,7 +539,7 @@ html {
 }
 
 .about{
-  height: 100vh;
+  height: fit-content;
 }
 
 .about_content{
@@ -547,7 +547,7 @@ html {
   flex-direction: column;
   gap: 1em;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   padding: 4em;
   font-family: 'Sofia Pro', sans-serif;
   font-weight: 400;
