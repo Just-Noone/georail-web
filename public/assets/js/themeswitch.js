@@ -5,7 +5,7 @@ const toggleSwitch = document.getElementById('toggleSwitch');
 function applyLightMode() {
     root.style.setProperty('--background', '#ffffff');
     root.style.setProperty('--background-secondary', '#ECECEC');
-    root.style.setProperty('--background-tertiary', '#cfcfcf');
+    root.style.setProperty('--background-tertiary', '#cbcbcb');
     root.style.setProperty('--black', '#000000');
     root.style.setProperty('--text', '#000000');
     root.style.setProperty('--text2', '#717171');

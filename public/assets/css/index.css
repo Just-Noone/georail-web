@@ -8,7 +8,7 @@
 
     --background : #0f0f0f;
     --background-secondary : #1E1E1E;
-    --background-tetriary : #3e3e3e;
+    --background-tertiary : #cbcbcb;
     --black : #000000;
     --gray : #717171;
     --white : #ffffff;
@@ -24,6 +24,7 @@
     --primary-gradient : linear-gradient(120deg, #FFBC40, #F2A310);
     --announcement-banner-gradient : linear-gradient(90deg, #C12345, #C73C29); 
     --accent-header : linear-gradient(120deg, #CA3470, #F2A310);
+    --secondary-gradient : linear-gradient(135deg, #41AEFF, #4C11F3);
 
     --background-dark : 1;
     --background-light : 0;
@@ -242,7 +243,7 @@ html {
 }
 
 .nav_divider {
-    width: 4px;
+    width: 2px;
     height: 50%;
     background-color: var(--black);
     opacity: 25%;
@@ -426,17 +427,14 @@ html {
 @keyframes fade_in_announcement {
   0% {
     opacity: 0;
-    left: -50px;
   }
   100% {
     opacity: 1;
-    left: 0;
   }
 }
 
 .hero_announcement_hidden{
   opacity: 0;
-  left: -50px;
   transition: 0.5s all;
 }
 
@@ -483,7 +481,7 @@ html {
   width: 100%;
   height: 100%;
   border-radius: 25px;
-  outline: var(--background-tetriary) 3px solid;
+  outline: var(--background-tertiary) 3px solid;
   color: var(--text);
   transition: all 0.5s ease;
   overflow: hidden;
@@ -544,6 +542,63 @@ html {
   height: 100vh;
 }
 
+.about_content{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  height: 100%;
+  padding: 4em;
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--text2);
+}
+
+.about_text{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.about_text p{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.about_divider{
+  margin-bottom: 0.1em;
+}
+
+.about_title{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  width: fit-content;
+}
+
+.about_title::after{
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  position: inherit;
+  left: 0;
+  bottom: 7px;
+  background: var(--primary-gradient);
+  margin: 0;
+  margin-top: 2px;
+}
+ 
 /**Footer**/
 
 .footer_main{
@@ -552,10 +607,100 @@ html {
   height: 300px;
   width: 100%;
   margin-top: auto;
+  color: var(--text);
+  align-self: flex-end;
 }
 
 .footer_bottom_als{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.screenshots_main{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  padding: 0.5em 4em;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.screenshots_frame{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300px;
+  border-radius: 25px;
+  padding: 2em;
+  color: var(--text);
+  transition: all 0.5s ease;
+  overflow: hidden;
+  justify-content: center;
+  background: url(/public/assets/img/southfield.png);
+  background-position: center;
+}
+
+.ss_button_about{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 1rem 5rem;
+  border-radius: 10000px;
+  border: none;
+  background: var(--secondary-gradient);
+  color: var(--white);
+  transition: 0.5s all;
+  outline: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.ss_button_about:hover{
+  padding: 1rem 6.5rem;
+}
+
+.ss_banter{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  text-decoration: none;
+  margin: 0 0 15px 0;
+  color: var(--white);
+  transition: 0.5s all;
+}
+
+.ss_subtitle{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 350;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--white);
+  transition: 0.5s all;
+}
+
+.ssb_title{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  width: fit-content;
+  margin-bottom: 0.6em;
+}
+
+.ssb_title::after{
+  content: '';
+  display: block;
+  width: 70px;
+  height: 3px;
+  position: inherit;
+  left: 0;
+  bottom: 7px;
+  background: var(--primary-gradient);
+  margin: 0;
+  margin-top: 2px;
 }
