@@ -52,6 +52,17 @@ const setLanguage = (language) => {
   document.getElementById("hero_announcement_title").textContent = translation.hero_ann_title;
   document.getElementById("hero_announcement_text").textContent = translation.hero_ann_sub;
   document.getElementById("cookies_text").textContent = translation.cookies_text;
+  document.getElementById("ss_title1").textContent = translation.ss_title1;
+  document.getElementById("ss_title2").textContent = translation.ss_title2;
+  document.getElementById("ss_about").textContent = translation.ss_about;
+  document.getElementById("cookies_close").textContent = translation.cookies_close;
+  document.getElementById("cookies_close_decl").textContent = translation.cookies_close_decl;
+  document.getElementById("about_title").textContent = translation.about_title;
+  document.getElementById("abt1").textContent = translation.about_text1;
+  document.getElementById("abt2").textContent = translation.about_text2;
+  document.getElementById("abt3").textContent = translation.about_text3;
+  document.getElementById("abt4").textContent = translation.about_text4;
+  document.getElementById("abt5").textContent = translation.about_text5;
 };
 
 // Event listener for the language selector
