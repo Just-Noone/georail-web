@@ -15,6 +15,7 @@
       "hero_ann_sub" : "The server is currently closed! The server might be back by mid March-April",
       "cookies_text" : "We use Cookies for statistics, like how much and when our website was used as well as for outage tracking. Those cookies are required for the website to function.",
       "ss_title1" : "Some of our",
+      "ssb_title" : "Gallery",
       "ss_title2" : "Finest screenshots",
       "ss_about" : "Visit our gallery!",
       "cookies_close" : "Accept",
@@ -40,7 +41,19 @@
       "hero_about": "O nas",
       "hero_ann_title" : "Ważne ogłoszenie",
       "hero_ann_sub" : "Serwer jest chwilowo zamknięty ! Serwer może powrócić w połowie marca lub kwietnia",
-      "cookies_text" : "Używamy plików cookie do celów statystycznych, takich jak to, jak często i kiedy nasza strona była używana, a także do śledzenia przerw w działaniu. Te pliki cookies są niezbędne do działania witryny."
+      "cookies_text" : "Używamy plików cookie do celów statystycznych, takich jak to, jak często i kiedy nasza strona była używana, a także do śledzenia przerw w działaniu. Te pliki cookies są niezbędne do działania witryny.",
+      "ss_title1" : "Niektóre z naszych",
+      "ss_title2" : "najlepszych zdjęć",
+      "ssb_title" : "Galeria",
+      "ss_about" : "Odwiedź naszą galerię!",
+      "cookies_close" : "Zaakceptuj",
+      "cookies_close_decl" : "Odrzuć",
+      "about_title" : "O nas",
+      "about_text1" : "GeoRail is a vibrant server known for its well known, high-quality builds that demonstrate the community's achievements with MTR. The community improves each build over time, with every detail playing a crucial role in ensuring it meets the highest standards of what MTR servers can achieve, making GeoRail a perfect choice among other MTR servers.",
+      "about_text2" : "As one of the largest and highest quality MTR servers, GeoRail is home to many talented builders, including Szandor13, Vitor2005, and BitOne. These people have built some of the most stunning and beautiful areas of GeoRail. We are a major player in the MTR server list, boasting 180+ members and over 1000 downloads on our packs, all while maintaining top quality.",
+      "about_text3" : "Currently, the GeoRail server areas like Damaia, Jachowice, and Pilzen - Bor are perfected to the last detail, making them one of the best server choices!",
+      "about_text4" : "GeoRail welcomes everyone and provides a friendly and interactive community where you can unleash your creativity and let it go free! We are really happy to be one of your choices and we look forward to welcoming you!",
+      "about_text5" : "Do zobaczenia w Geo!"
     },
     "fr": {
       "nav_about": "À propos",
@@ -184,7 +197,19 @@
       "hero_about": "О нас",
       "hero_ann_title" : "Важные объявления",
       "hero_ann_sub" : "Сервер временно закрыт! Сервер может быть вернется в середине Марта - Апреля",
-      "cookies_text" : "Мы используем фалы cookie для статистики, например для определения частоты и времени посещаемости нашего сайта, а также для мониторинга сбоев в работе. Данные файлы необходимы для правильной работы сайта"
+      "cookies_text" : "Мы используем фалы cookie для статистики, например для определения частоты и времени посещаемости нашего сайта, а также для мониторинга сбоев в работе. Данные файлы необходимы для правильной работы сайта",
+      "ss_title1" : "Одни из наших",
+      "ss_title2" : "Лучших скриншотов",
+      "ss_about" : "Загляните в галерею!",
+      "ssb_title" : "Галерея",
+      "cookies_close" : "Принять",
+      "cookies_close_decl" : "Отказаться",
+      "about_title" : "О нас",
+      "about_text1" : "GeoRail is a vibrant server known for its well known, high-quality builds that demonstrate the community's achievements with MTR. The community improves each build over time, with every detail playing a crucial role in ensuring it meets the highest standards of what MTR servers can achieve, making GeoRail a perfect choice among other MTR servers.",
+      "about_text2" : "As one of the largest and highest quality MTR servers, GeoRail is home to many talented builders, including Szandor13, Vitor2005, and BitOne. These people have built some of the most stunning and beautiful areas of GeoRail. We are a major player in the MTR server list, boasting 180+ members and over 1000 downloads on our packs, all while maintaining top quality.",
+      "about_text3" : "Currently, the GeoRail server areas like Damaia, Jachowice, and Pilzen - Bor are perfected to the last detail, making them one of the best server choices!",
+      "about_text4" : "GeoRail welcomes everyone and provides a friendly and interactive community where you can unleash your creativity and let it go free! We are really happy to be one of your choices and we look forward to welcoming you!",
+      "about_text5" : "See you in Geo!"
     }
   }
   

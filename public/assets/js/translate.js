@@ -63,6 +63,7 @@ const setLanguage = (language) => {
   document.getElementById("abt3").textContent = translation.about_text3;
   document.getElementById("abt4").textContent = translation.about_text4;
   document.getElementById("abt5").textContent = translation.about_text5;
+  document.getElementById("ssb_title").textContent = translation.ssb_title;
 };
 
 // Event listener for the language selector
