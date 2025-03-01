@@ -30,6 +30,12 @@
     --background-light : 0;
 
     --sb-size: 4px;
+
+    --text-size-huge : 3rem;
+    --text-size-large : 2.5rem;
+    --text-size-medium : 1.5rem;
+    --text-size-small : 1rem;
+    
 }
 
 body {
@@ -638,7 +644,7 @@ html {
   transition: all 0.5s ease;
   overflow: hidden;
   justify-content: center;
-  background: url(/public/assets/img/southfield.png);
+  background: url(/public/assets/img/Jac.png);
   background-position: center;
 }
 
@@ -674,6 +680,7 @@ html {
 
 .ss_subtitle{
   font-family: 'Sofia Pro', sans-serif;
+  text-shadow: 0px 0px 24px rgba(0, 0, 0, 1);
   font-weight: 350;
   font-size: 1.6rem;
   text-decoration: none;
