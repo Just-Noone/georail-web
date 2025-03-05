@@ -149,7 +149,7 @@ html {
 
   .hero_background-dark {
     width: 100%;
-    height: 100vh;
+    height: inherit;
     object-fit: cover;
     opacity: var(--background-dark);
     display: flex;
@@ -159,7 +159,7 @@ html {
   
   .hero_background-light {
     width: 100%;
-    height: 100vh;
+    height: inherit;
     object-fit: cover;
     opacity: var(--background-light);
     display: flex;
@@ -173,7 +173,128 @@ html {
     background-color: var(--black);
   }
 
+  .hero{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 4em;
+    overflow: hidden;
+  }
 
+  .hero_bg{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .hero_foreground_container{
+    width: fit-content;
+    height: fit-content;
+    z-index: 10000;
+  }
+  
+  .hero_button_about{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 1rem 5rem;
+    border-radius: 10000px;
+    border: none;
+    background: var(--primary-gradient);
+    color: var(--white);
+    transition: 0.5s all;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .hero_button_about:hover{
+    padding: 1rem 6.5rem;
+  }
+  
+  .hero_banter{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-decoration: none;
+    margin: 0 0 15px 0;
+    color: var(--white);
+    transition: 0.5s all;
+  }
+  
+  .hero_subtitle{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 350;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.5s all;
+  }
+  
+  .hero_announcement{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.5s all;
+    text-align: center;
+    background: var(--announcement-banner-gradient);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem 0;
+    opacity: 1;
+    animation: fade_in_announcement 0.5s ease-in-out ;
+    overflow: hidden;
+  }
+  
+  @keyframes fade_in_announcement {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .hero_announcement_hidden{
+    opacity: 0;
+    transition: 0.5s all;
+  }
+  
+  .hero_announcement_text{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 700;
+  }
+  
+  .hero_announcement_close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+
+ /**
+ 
+ Rest or something
+ i dont know what i am doing at all :D 
+
+ **/
 
   .lang_select_main{
     background-color: var(--background);
@@ -197,7 +318,7 @@ html {
     width: 100%;
     height: 8rem;
     position: fixed;
-    z-index: 10000;
+    z-index: 1000000000000000000;
 }
 
 .nav_main {
@@ -354,110 +475,6 @@ html {
   transition: 0.5s all;
 }
 
-.hero{
-  overflow: hidden;
-}
-
-.hero_foreground{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  z-index: 1;
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  width: fit-content;
-  height: 100%;
-  margin-left: 2rem;
-}
-
-.hero_button_about{
-  font-family: 'Sofia Pro', sans-serif;
-  font-weight: 500;
-  font-size: 1.3rem;
-  text-decoration: none;
-  padding: 1rem 5rem;
-  border-radius: 10000px;
-  border: none;
-  background: var(--primary-gradient);
-  color: var(--white);
-  transition: 0.5s all;
-  outline: none;
-  cursor: pointer;
-}
-
-.hero_button_about:hover{
-  padding: 1rem 6.5rem;
-}
-
-.hero_banter{
-  font-family: 'Sofia Pro', sans-serif;
-  font-weight: 800;
-  font-size: 2.5rem;
-  text-decoration: none;
-  margin: 0 0 15px 0;
-  color: var(--white);
-  transition: 0.5s all;
-}
-
-.hero_subtitle{
-  font-family: 'Sofia Pro', sans-serif;
-  font-weight: 350;
-  font-size: 1.6rem;
-  text-decoration: none;
-  color: var(--white);
-  transition: 0.5s all;
-}
-
-.hero_announcement{
-  font-family: 'Sofia Pro', sans-serif;
-  font-weight: 500;
-  font-size: 1.3rem;
-  text-decoration: none;
-  color: var(--white);
-  transition: 0.5s all;
-  text-align: center;
-  background: var(--announcement-banner-gradient);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: fit-content;
-  padding: 1rem 0;
-  opacity: 1;
-  animation: fade_in_announcement 0.5s ease-in-out ;
-  overflow: hidden;
-}
-
-@keyframes fade_in_announcement {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.hero_announcement_hidden{
-  opacity: 0;
-  transition: 0.5s all;
-}
-
-.hero_announcement_text{
-  font-family: 'Sofia Pro', sans-serif;
-  font-weight: 700;
-}
-
-.hero_announcement_close{
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1rem;
-  border: transparent;
-  background-color: transparent;
-  cursor: pointer;
-}
 
 .loader_screen{
   position: fixed;
@@ -645,7 +662,7 @@ html {
   overflow: hidden;
   justify-content: center;
   background: url(/public/assets/img/Jac.png);
-  background-position: center;
+  background-position: center right;
 }
 
 .ss_button_about{
@@ -710,4 +727,44 @@ html {
   background: var(--primary-gradient);
   margin: 0;
   margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+
+  .hero{
+    height: 100vh;
+  }
+
+  .hero_announcement{
+    padding: 1rem 1.6em;
+  }
+
+  .ss_button_about{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding: 1rem 1rem;
+    border-radius: 10000px;
+    border: none;
+    background: var(--secondary-gradient);
+    color: var(--white);
+    transition: 0.5s all;
+    outline: none;
+    cursor: pointer;
+    width: fit-content;
+    width: 100%;
+    text-wrap-mode: nowrap;
+  }
+
+  .about_content{
+    padding: 2em;
+  }
+  
+}
+
+.hero_foreground_frame{
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
