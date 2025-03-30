@@ -654,6 +654,8 @@ html {
   scale: 102%;
 }
 
+
+
 .about_server_details > *:hover > p{
   color: var(--white);
 }
