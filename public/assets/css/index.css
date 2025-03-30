@@ -1,0 +1,882 @@
+@import url('https://fonts.cdnfonts.com/css/sofia-pro');
+
+
+:root {
+    /** ** ** ** ** Color Schemes ** ** ** ** **/
+
+    /** Dark Theme - Backgrounds **/
+
+    --background : #0f0f0f;
+    --background-secondary : #1E1E1E;
+    --background-tertiary : #cbcbcb;
+    --black : #000000;
+    --gray : #717171;
+    --white : #ffffff;
+
+    /** Dark Theme - Text and colors **/
+
+    --text : #ffffff;
+    --text2 : #ffffff;
+    --nav-text : #ffffff;
+    --primary : #FFBC40;
+    --secondary : #F2A310;
+    --tertiary : #3457CA;
+    --primary-gradient : linear-gradient(120deg, #FFBC40, #F2A310);
+    --announcement-banner-gradient : linear-gradient(90deg, #0d307f, #0f188d); 
+    --accent-header : linear-gradient(120deg, #CA3470, #F2A310);
+    --secondary-gradient : linear-gradient(135deg, #41AEFF, #4C11F3);
+
+    --background-dark : 1;
+    --background-light : 0;
+
+    --sb-size: 4px;
+
+    --text-size-huge : 3rem;
+    --text-size-large : 2.5rem;
+    --text-size-medium : 1.5rem;
+    --text-size-small : 1rem;
+    
+}
+
+body {
+    background: var(--background);
+    font-family: 'Sofia Pro', sans-serif;
+    transition: all 0.5s;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+  border-radius: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--background-tetriary);
+  border-radius: 12px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+      scrollbar-color: var(--background-secondary)
+                     var(--background-tetriary);
+  }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s all;
+    font-family: 'Sofia Pro', sans-serif;
+}
+
+
+  /** Toggle Switch **/
+
+  /* From Uiverse.io by Madflows */ 
+.toggle-switch {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    scale: 75%;
+  }
+  
+  .toggle-switch:hover {
+    scale: 0.85;
+  }
+
+  .switch-label {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: var(--background);
+    border-radius: 25px;
+    cursor: pointer;
+    border: 3px solid var(--background);
+  }
+  
+  .checkbox {
+    position: absolute;
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .checkbox:checked ~ .slider {
+    background-color: var(--white);
+  }
+  
+  .slider::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 12px -4px 0px 0px var(--white);
+    box-shadow: inset 12px -4px 0px 0px var(--white);
+    background-color: var(--background);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .checkbox:checked ~ .slider::before {
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+    background-color: var(--gray);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  
+  /**Hero**/
+
+  .hero_background-dark {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+    opacity: var(--background-dark);
+    display: flex;
+    transition: all 0.5s;
+    position: absolute;
+  }
+  
+  .hero_background-light {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+    opacity: var(--background-light);
+    display: flex;
+    transition: all 0.5s;
+    position: absolute;
+  }
+
+  .background {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+  }
+
+  .hero{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 4em;
+    overflow: hidden;
+  }
+
+  .hero_bg{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .hero_foreground_container{
+    width: fit-content;
+    height: fit-content;
+    z-index: 10000;
+  }
+  
+  .hero_button_about{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 1rem 5rem;
+    border-radius: 10000px;
+    border: none;
+    background: var(--primary-gradient);
+    color: var(--white);
+    transition: 0.5s all;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .hero_button_arrow{
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s all;
+    margin-left: 5%;
+    animation: bounce 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+  
+  .hero_button_about:hover .hero_button_arrow{
+    opacity: 1;
+    margin-left: 3.5rem;
+    transition: 0.5s all;
+  }
+
+  .hero_button_about:hover{
+    padding: 1rem 6.5rem;
+  }
+  
+  .hero_banter{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-decoration: none;
+    margin: 0 0 15px 0;
+    color: var(--white);
+    transition: 0.5s all;
+  }
+  
+  .hero_subtitle{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 350;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.5s all;
+  }
+  
+  .hero_announcement{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.5s all;
+    text-align: center;
+    background: var(--announcement-banner-gradient);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem 0;
+    opacity: 1;
+    animation: fade_in_announcement 0.5s ease-in-out ;
+    overflow: hidden;
+
+    visibility: hidden;
+  }
+  
+  @keyframes fade_in_announcement {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes bounce{
+    from { transform: translate3d(0, 2px, 0);}
+    to { transform: translate3d(0, -2px, 0);}
+}
+
+@keyframes bounce-r{
+  from { transform: translate3d(2px, 0, 0);}
+  to { transform: translate3d(-2px, 0, 0);}
+}
+
+  .hero_announcement_hidden{
+    opacity: 0;
+    transition: 0.5s all;
+  }
+  
+  .hero_announcement_text{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 700;
+  }
+  
+  .hero_announcement_close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+
+ /**
+ 
+ Rest or something
+ i dont know what i am doing at all :D 
+
+ **/
+
+  .lang_select_main{
+    background-color: var(--background);
+    color: var(--text2);
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    outline: none;
+  }
+
+  .lang_select_main:focus{
+    outline: none;
+  }
+  .nav_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 8rem;
+    position: fixed;
+    z-index: 1000000000000000000;
+}
+
+.nav_main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 10000px;
+    background-color: var(--background-secondary);
+    z-index: 10000;
+    width: 90%;
+    height: 60%;
+}
+
+.nav_content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--text);
+}
+
+.nav_content > * {
+    width: fit-content;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+    margin-right: 1.2em;
+    list-style: none;
+    color:var(--text)
+}
+
+.nav_logo {
+    width: auto;
+    height: 80%;
+}
+
+.nav_logo_text {
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--nav-text);
+    text-decoration: none;
+}
+
+.nav_divider {
+    width: 2px;
+    height: 50%;
+    background-color: var(--black);
+    opacity: 25%;
+    border-radius: 1000px;
+}
+
+.nav_link {
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 200;
+    font-size: 1rem;
+    color: var(--nav-text);
+    text-decoration: none;
+}
+
+.nav_dropdown_main {
+    position: relative;
+    
+}
+
+.nav_dropdown_main ul.nav_dropdown {
+    width: fit-content;
+    background-color: var(--background-secondary);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10000;
+    display: none;
+    padding: 0;
+    list-style: none;
+    border-radius: 15px;
+    overflow: hidden;
+    animation: animate_slidein 0.1s ease-in-out;
+}
+
+
+.nav_dropdown_main ul.nav_dropdown li {
+    display: block;
+    width: 200px;
+}
+
+.nav_dropdown_main ul.nav_dropdown li a {
+    display: block;
+    padding: 15px 20px;
+    color: var(--nav-text);
+    text-decoration: none;
+    text-align: left;
+    background-color: var(--background-secondary);
+    color: var(--text);
+    
+}
+
+.nav_dropdown_main ul.nav_dropdown li a:hover {
+    background-color: var(--background);
+}
+
+.nav_dropdown_main:hover ul.nav_dropdown {
+    display: block;
+    color: var(--text);
+}
+
+@keyframes animate_slidein {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+
+  
+@keyframes animate_slideout {
+  from {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+
+.nav_link{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav_link:hover{
+  scale: 1.05;
+  transition: 0.5s all;
+}
+
+
+.discord_nav:hover{
+  color: #7289da;
+  transition: 0.5s all;
+}
+
+
+.loader_screen{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary);
+  z-index: 99900009;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.main_cookies{
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  width: fit-content;
+  height: fit-content;
+  z-index: 1000000000000000000000;
+}
+
+.cookies_content{
+  background: var(--background-secondary);
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  outline: var(--background-tertiary) 3px solid;
+  color: var(--text);
+  transition: all 0.5s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7em;
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 10px;
+  max-width: 380px;
+  z-index: 1000000000000000000000;
+}
+
+.cookies_content_hidden{
+  opacity: 0;
+  left: -50px;
+  transition: 0.5s all;
+}
+
+.cookies_text{
+  width: 100%;
+  height: fit-content;
+  margin-top: 10px;
+  align-self: center;
+  text-align: center;
+}
+
+.cookies_button{
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 5px 0 0 0;
+  border-radius: 10000px;
+  transition: all 0.5s ease;
+}
+
+.cookies_button_decline{
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+  background: var(--announcement-banner-gradient);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10000px;
+  transition: all 0.5s ease;
+}
+
+.cookies_button:hover{
+  width: 97%;
+}
+
+.cookies_button:active{
+  width: 102%;
+  opacity: 0.9;
+}
+
+.cookies_button_decline:hover{
+  width: 97%;
+}
+
+.cookies_button_decline:active{
+  width: 102%;
+  opacity: 0.9;
+}
+
+.about{
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+.about_content{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 70%;
+  height: fit-content;
+  padding: 4em 1em 4em 4em;
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--text2);
+}
+
+.about_server_details{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 30%;
+  padding: 4em 4em 4em 1em;
+  justify-content: center;
+}
+
+.about_server_details > *{
+  background-color: var(--background-secondary);
+  padding: 0.5em;
+  height: 23%;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--text2);
+}
+
+.about_server_details > *:hover{
+  background-color: var(--tertiary);
+  scale: 102%;
+}
+
+.about_server_details > *:hover > p{
+  color: var(--white);
+}
+
+.about_server_details > *:hover > h3{
+  background-color: var(--white);
+}
+
+.about_server_details > * > h3{
+  background: var(--tertiary);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5em;
+  font-weight: 800;
+}
+
+.about_text{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.about_text p{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.about_divider{
+  margin-bottom: 0.1em;
+}
+
+.about_title{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  width: fit-content;
+}
+
+.about_title::after{
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  position: inherit;
+  left: 0;
+  bottom: 7px;
+  background: var(--primary-gradient);
+  margin: 0;
+  margin-top: 2px;
+}
+
+.about_title:hover ::after{
+  width: 300px;
+}
+ 
+/**Footer**/
+
+.footer_main{
+  background-color: var(--background-secondary);
+  padding: 10px 20px;
+  height: 300px;
+  width: 100%;
+  margin-top: auto;
+  color: var(--text);
+  align-self: flex-end;
+}
+
+.footer_bottom_als{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screenshots_main{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  padding: 0.5em 4em;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.screenshots_frame{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300px;
+  border-radius: 25px;
+  padding: 2em;
+  color: var(--text);
+  transition: all 0.5s ease;
+  overflow: hidden;
+  justify-content: center;
+  background: url(/public/assets/img/Jac.png);
+  background-position: center right;
+}
+
+.ss_button_about{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 1rem 5rem;
+  border-radius: 10000px;
+  border: none;
+  background: var(--secondary-gradient);
+  color: var(--white);
+  transition: 0.5s all;
+  outline: none;
+  cursor: pointer;
+  width: fit-content;
+  position: relative;
+}
+
+.ss_button_arrow{
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s all;
+  margin-left: 5%;
+  animation: bounce-r 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.ss_button_about:hover .ss_button_arrow{
+  opacity: 1;
+  margin-left: 3.5rem;
+  transition: 0.5s all;
+}
+
+.ss_button_about:hover{
+  padding: 1rem 6.5rem;
+}
+
+.ss_banter{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  text-decoration: none;
+  margin: 0 0 15px 0;
+  color: var(--white);
+  transition: 0.5s all;
+}
+
+.ss_subtitle{
+  font-family: 'Sofia Pro', sans-serif;
+  text-shadow: 0px 0px 24px rgba(0, 0, 0, 1);
+  font-weight: 350;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--white);
+  transition: 0.5s all;
+}
+
+.ssb_title{
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  width: fit-content;
+  margin-bottom: 0.6em;
+}
+
+.ssb_title::after{
+  content: '';
+  display: block;
+  width: 70px;
+  height: 3px;
+  position: inherit;
+  left: 0;
+  bottom: 7px;
+  background: var(--primary-gradient);
+  margin: 0;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+
+  .hero{
+    height: 100vh;
+  }
+
+  .hero_announcement{
+    padding: 1rem 1.6em;
+  }
+
+  .ss_button_about{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding: 1rem 1rem;
+    border-radius: 10000px;
+    border: none;
+    background: var(--secondary-gradient);
+    color: var(--white);
+    transition: 0.5s all;
+    outline: none;
+    cursor: pointer;
+    width: fit-content;
+    width: 100%;
+    text-wrap-mode: nowrap;
+  }
+
+  .about_content{
+    padding: 2em;
+  }
+  
+}
+
+.hero_foreground_frame{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

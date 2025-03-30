@@ -1,0 +1,4 @@
+/.idea
+.qodo
+/public/assets/env
+node_modules/
