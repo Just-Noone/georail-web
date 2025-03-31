@@ -245,8 +245,11 @@ html {
     color: #ffffff7f;
   }
 
+  .hero_button_arrow{
+    opacity: 0;
+  }
+
   .hero_button_about:active .hero_button_arrow{
-    opacity: 1;
     margin-left: 1.5rem;
     transition: 0.5s all;
     opacity: 0;
@@ -912,7 +915,7 @@ html {
   border-radius: 2000px;
   align-items: center;
   width: fit-content;
-  background-color: var(--background);
+  background-color: var(--background-tertiary);
 }
 
 @media only screen and (max-width: 900px) {

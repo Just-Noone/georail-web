@@ -6,38 +6,61 @@ class Translator {
     }
 
     async init() {
-        // Setup language selector
         this.selector = document.getElementById('languageSelector');
         this.selector.addEventListener('change', (e) => {
             this.changeLanguage(e.target.value);
         });
 
-        // Load translations
-        const savedLang = localStorage.getItem('preferredLang');
-        const browserLang = navigator.language.split('-')[0];
-        this.currentLang = savedLang || browserLang || 'en';
-        this.selector.value = this.currentLang;
-        
-        await this.loadTranslations(this.currentLang);
+        await this.setInitialLanguage();
         this.applyTranslations();
     }
 
-    async changeLanguage(langCode) {
-        this.currentLang = langCode;
-        localStorage.setItem('preferredLang', langCode);
-        await this.loadTranslations(langCode);
-        this.applyTranslations();
+    async setInitialLanguage() {
+        const savedLang = localStorage.getItem('preferredLang');
+        if (savedLang) {
+            await this.loadLanguageWithFallback(savedLang);
+            return;
+        }
+
+        const browserLang = this.getNormalizedBrowserLang();
+        await this.loadLanguageWithFallback(browserLang);
+    }
+
+    getNormalizedBrowserLang() {
+        const rawLang = navigator.language || 'en';
+        return rawLang
+            .split('-')[0] // Remove regional suffix
+            .replace('-', '_') // Format for filename
+            .toLowerCase();
+    }
+
+    async loadLanguageWithFallback(langCode) {
+        try {
+            await this.loadTranslations(langCode);
+            this.currentLang = langCode;
+            this.selector.value = langCode;
+        } catch (error) {
+            console.warn(`Failed to load ${langCode}, trying fallback...`);
+            
+            // First try base language (e.g., 'fr_CA' → 'fr')
+            const baseLang = langCode.split('_')[0];
+            if (baseLang !== langCode && baseLang !== 'en') {
+                await this.loadLanguageWithFallback(baseLang);
+            } else {
+                // Final fallback to English
+                await this.loadTranslations('en');
+                this.currentLang = 'en';
+                this.selector.value = 'en';
+            }
+        }
     }
 
     async loadTranslations(langCode) {
-        try {
-            const response = await fetch(`../public/assets/lang/${langCode}.tsv`);
-            const tsv = await response.text();
-            this.parseTSV(tsv);
-        } catch (error) {
-            console.error(`Failed to load ${langCode} translations:`, error);
-            if (langCode !== 'en') await this.loadTranslations('en');
-        }
+        const response = await fetch(`../public/assets/lang/${langCode}.tsv`);
+        if (!response.ok) throw new Error('TSV not found');
+        
+        const tsv = await response.text();
+        this.parseTSV(tsv);
     }
 
     parseTSV(tsv) {
@@ -50,19 +73,26 @@ class Translator {
         });
     }
 
+    changeLanguage(langCode) {
+        localStorage.setItem('preferredLang', langCode);
+        this.currentLang = langCode;
+        this.loadTranslations(langCode)
+            .then(() => this.applyTranslations())
+            .catch(() => this.loadLanguageWithFallback('en'));
+    }
+
     applyTranslations() {
         document.querySelectorAll('[data-translate-id]').forEach(element => {
             const id = element.dataset.translateId;
             if (this.translations[id]) {
+                element.textContent = this.translations[id];
                 if (element.placeholder) {
                     element.placeholder = this.translations[id];
-                } else {
-                    element.textContent = this.translations[id];
                 }
             }
         });
     }
 }
 
-// Initialize when page loads
+// Initialize when ready
 window.addEventListener('DOMContentLoaded', () => new Translator());
