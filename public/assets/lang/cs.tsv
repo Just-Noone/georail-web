@@ -1,0 +1,16 @@
+The given text as ID	The translation to your language	An brief explanation of what it means
+nav_about	O nás	The link to our about page
+nav_server	Server	 The link to the server page
+nav_dynmap	Mapa	The link to our dynmap site
+nav_sysmap	Schéma linkového vedení	Same for system map
+nav_joininstructions	Jak se připojit?	Link to our join instructions
+nav_discord	Discord	Link to our discord
+nav_cities	Města	Link to the cities page
+nav_railways	Železnice	As well as the Railways page
+		
+hero_title1	MTR	"MTR" the title you find on the start of the page
+hero_title2	Ve své nejlepší podobě	"At its finest" The main title you find
+hero_about	O nás	The button below the titles on the hero
+hero_ann_title	Důležité oznámení	The announcement that pops up
+hero_ann_sub	Server je momentálně uzavřen! Server by se mohl vrátit v polovině března až dubna.	And the content of the announcement
+cookies_text	Soubory cookies používáme pro statistiky, například kdy a kolikrát byly náš web použit, a také pro sledování výpadků. Tyto cookies jsou nezbytné pro fungování webových stránek.	the text of the cookies

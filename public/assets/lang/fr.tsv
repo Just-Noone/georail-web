@@ -1,0 +1,16 @@
+The given text as ID	The translation to your language	An brief explanation of what it means
+nav_about	À propos	The link to our about page
+nav_server	Serveur	 The link to the server page
+nav_dynmap	Carte dynamique	The link to our dynmap site
+nav_sysmap	Plan du système	Same for system map
+nav_joininstructions	Comment nous rejoindre?	Link to our join instructions
+nav_discord	Discord	Link to our discord
+nav_cities	Villes	Link to the cities page
+nav_railways	Compagnies ferroviaire	As well as the Railways page
+		
+hero_title1	MTR	"MTR" the title you find on the start of the page
+hero_title2	à son mieux 	"At its finest" The main title you find
+hero_about	À propos	The button below the titles on the hero
+hero_ann_title	Annonces importantes	The announcement that pops up
+hero_ann_sub	Le serveur est actuellement fermé. Réouverture prévue pour mi-mars/avril	And the content of the announcement
+cookies_text	Nous utilisons des cookies afin d'effectuer des statistiques, comme la quantité et le moment où notre site a été utilisé, ainsi que pour le suivi des pannes. Ces cookies sont nécéssaires au bon fonctionnement du site.	the text of the cookies

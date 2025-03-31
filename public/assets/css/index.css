@@ -291,6 +291,7 @@ html {
     overflow: hidden;
 
     visibility: hidden;
+    display: none;
   }
   
   @keyframes fade_in_announcement {
@@ -298,7 +299,7 @@ html {
       opacity: 0;
     }
     100% {
-      opacity: 1;
+      opacity: 0;
     }
   }
 
