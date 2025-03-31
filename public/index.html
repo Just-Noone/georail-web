@@ -7,7 +7,7 @@
     <title>GeoRail</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.cdnfonts.com/css/sofia-pro" rel="stylesheet">
-    <link href="../public/assets/css/index.css" rel="stylesheet">
+    <link href="../public/assets/css/index.css" rel="stylesheet" rel="preload">
     <link rel="icon" href="../public/assets/img/Geo.svg" type="image/x-icon">
     <meta name="twitter:title" content="GeoRail">
     <meta name="twitter:description" content="GeoRail is a server full of vibrant, creative high quality builds.
@@ -17,7 +17,6 @@
     The GeoRail server features a various spectre of styles. From Asian to European. We are
     welcoming everybody. ">
     <meta name="twitter:image" content="../public/assets/img/Geo.png">
-    
     <meta name="twitter:card" content="../public/assets/img/BannerNew.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -25,6 +24,7 @@
 
   <!--Cookies banner-->
 
+  <div class="cookies_center">
   <div class="main_cookies" id="cookie_frame">
     <div class="cookies_content">
       <p class="cookies_text" id="cookies_text">We use Cookies for statistics, like how much and when our website was used as well as for outage tracking. Those cookies are required for the website to function. </p>
@@ -32,14 +32,15 @@
       <button class="cookies_button_decline" id="cookies_close_decl">Decline</button>
     </div>
   </div>
+</div>
 
  <!--Navbar-->
 
   <div class="nav_container">
     <div class="nav_main">
       <div class="nav_content">
-        <li><img src="../public/assets/img/Geo.svg" alt="logo" class="nav_logo"><a href="/public/index.html" class="nav_logo_text">GeoRail</a></li>
-        <li><div class="nav_divider"></div></li>
+        <li class="nav_logo_1"><img src="../public/assets/img/Geo.svg" alt="logo" class="nav_logo"><a href="/public/index.html" class="nav_logo_text">GeoRail</a></li>
+        <li class="nav_divider_"><div class="nav_divider"></div></li>
         <li><a href="../public/index.html#about" class="nav_link" id="nav_about">About</a></li>
         <li class="nav_dropdown_main">
           <a href="#" class="nav_link"><span id="nav_server">Server</span> <i class="fa-solid fa-caret-down" style="transition: 0s all;"></i> </a>
@@ -118,26 +119,26 @@
         <b id="abt5">See you in Geo!</b>
       </p>
       </div>
-    <div class="about_server_details">
-      <div class="about_members">
-        <p>Over</p>
-        <h3 id="countup-members" data-start="0" data-end="170" data-duration="3000" data-has-plus="true">170+</h3>
-        <p>Members</p>
-        <script src="../public/assets/js/countup-a.js"></script>
+      <div class="about_server_details">
+        <div class="about_members">
+          <p>Over</p>
+          <h3 id="countup-members" data-start="0" data-end="170" data-duration="3000" data-has-plus="true">170+</h3>
+          <p>Members</p>
+          <script src="../public/assets/js/countup-a.js"></script>
+        </div>
+        <div class="about_date">
+          <p>At it's finest since</p>
+          <h3>2024</h3>
+          
+          
+        </div>
+        <div class="about_rank">
+          <p>Over</p>
+          <h3 id="countup-builders" data-start="0" data-end="20" data-duration="3000" data-has-plus="true">20+</h3>
+          <p>builders</p>
+          <script src="../public/assets/js/countup-b.js"></script>
+        </div>
       </div>
-      <div class="about_date">
-        <p>At it's finest since</p>
-        <h3>2024</h3>
-        
-        
-      </div>
-      <div class="about_rank">
-        <p>Over</p>
-        <h3 id="countup-builders" data-start="0" data-end="20" data-duration="3000" data-has-plus="true">20+</h3>
-        <p>builders</p>
-        <script src="../public/assets/js/countup-b.js"></script>
-      </div>
-    </div>
   </div>
 
   <!--Screenshots-->

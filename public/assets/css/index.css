@@ -69,6 +69,7 @@ body::-webkit-scrollbar-thumb {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 * {
@@ -398,13 +399,18 @@ html {
     gap: 1.2em;
     margin-right: 1.2em;
     list-style: none;
-    color:var(--text)
+    color:var(--text);
 }
 
 .nav_logo {
     width: auto;
     height: 80%;
 }
+
+.nav_logo_1 { 
+  display: flex;
+}
+
 
 .nav_logo_text {
     font-family: 'Sofia Pro', sans-serif;
@@ -897,4 +903,59 @@ html {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+
+  .nav_content > *:nth-child(n+3)  {
+    display: none;
+  }
+
+  .hero{
+    padding: 2em;
+  }
+
+  .main_cookies{
+    display: flex;
+    width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    justify-content: center;
+    
+  }
+
+  .cookies_center{
+    position: fixed;
+    bottom: 0;
+    left: calc(50vw - 50vw);
+    width: 100vw;
+    z-index: 1000000000000000000001;
+  }
+
+  .about{
+    flex-direction: column;
+  }
+
+  .about_content{
+    width: 100%;
+    padding: 2em 2em 5px 2em;
+  }
+
+  .about_server_details{
+    width: 100%;
+    margin: 0;
+    padding: 2em;
+    flex-direction: column;
+    table-layout: fixed;
+    overflow-x: scroll;
+    overflow: hidden;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+
+  .about_server_details > *{
+    width: 100%;
+    height: 200px;
+  }
 }
