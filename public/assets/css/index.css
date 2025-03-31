@@ -906,6 +906,15 @@ html {
   height: 100%;
 }
 
+.language_sel_container{
+  display: flex;
+  flex-direction: row;
+  border-radius: 2000px;
+  align-items: center;
+  width: fit-content;
+  background-color: var(--background);
+}
+
 @media only screen and (max-width: 900px) {
 
   .nav_content > *:nth-child(n+3)  {
