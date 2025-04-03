@@ -2,4 +2,4 @@
 .qodo
 /public/assets/env
 node_modules/
-/server/mods
+/server/mods/georail
