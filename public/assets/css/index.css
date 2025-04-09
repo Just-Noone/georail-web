@@ -638,6 +638,17 @@ html {
   flex-direction: row;
 }
 
+.about_members, .about_date, .about_rank{
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.about_members:hover, .about_date:hover, .about_rank:hover{
+  box-shadow: 0 0 20px var(--background-secondary);
+  transition: all 0.5s ease;
+}
+
 .about_content{
   display: flex;
   flex-direction: column;
@@ -977,3 +988,63 @@ html {
     padding: 0;
   }
 }
+
+.partners_svg{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  
+  .partners_svg > *{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .partners_svg > * > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .partners_svg{
+    opacity: var(--background-dark);
+  }
+
+  .partners_svg_2{
+    opacity: var(--background-light);
+  }
+
+  .partners_svg_container > * > *{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: all 0.6s;
+    z-index: inherit;
+  }	
+
+  .partners_svg_container{
+    overflow: hidden;
+    display: flex;
+    transition: all 1.5s;
+    position: relative; 
+    width: 100%;
+    height: 400px;
+  }
+
+  .partners_svg_gradient{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #ffffff, #ffffff);
+    z-index: 3;
+  }
