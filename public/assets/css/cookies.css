@@ -1,0 +1,88 @@
+.main_cookies{
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    width: fit-content;
+    height: fit-content;
+    z-index: 1000000000000000000000;
+  }
+  
+  .cookies_content{
+    background: var(--background-secondary);
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    outline: var(--background-tertiary) 3px solid;
+    color: var(--text);
+    transition: all 0.5s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7em;
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 10px;
+    max-width: 380px;
+    z-index: 1000000000000000000000;
+  }
+  
+  .cookies_content_hidden{
+    opacity: 0;
+    left: -50px;
+    transition: 0.5s all;
+  }
+  
+  .cookies_text{
+    width: 100%;
+    height: fit-content;
+    margin-top: 10px;
+    align-self: center;
+    text-align: center;
+  }
+  
+  .cookies_button{
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 5px 0 0 0;
+    border-radius: 10000px;
+    transition: all 0.5s ease;
+  }
+  
+  .cookies_button_decline{
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    background: var(--announcement-banner-gradient);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10000px;
+    transition: all 0.5s ease;
+  }
+  
+  .cookies_button:hover{
+    width: 97%;
+  }
+  
+  .cookies_button:active{
+    width: 102%;
+    opacity: 0.9;
+  }
+  
+  .cookies_button_decline:hover{
+    width: 97%;
+  }
+  
+  .cookies_button_decline:active{
+    width: 102%;
+    opacity: 0.9;
+  }

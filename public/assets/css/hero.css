@@ -1,0 +1,193 @@
+  /**Hero**/
+
+  .hero_background-dark {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+    opacity: var(--background-dark);
+    display: flex;
+    transition: all 0.5s;
+    position: absolute;
+  }
+
+  
+.hero_foreground_frame{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+  
+  .hero_background-light {
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+    opacity: var(--background-light);
+    display: flex;
+    transition: all 0.5s;
+    position: absolute;
+  }
+
+  .background {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+  }
+
+  .hero{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 4em;
+    overflow: hidden;
+  }
+
+  .hero_bg{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .hero_foreground_container{
+    width: fit-content;
+    height: fit-content;
+    z-index: 10000;
+  }
+  
+  .hero_button_about{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 1rem 5rem;
+    border-radius: 10000px;
+    border: none;
+    background: var(--primary-gradient);
+    color: var(--white);
+    transition: 0.5s all;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .hero_button_arrow{
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s all;
+    margin-left: 5%;
+    animation: bounce 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+  
+  .hero_button_about:hover .hero_button_arrow{
+    opacity: 1;
+    margin-left: 3.5rem;
+    transition: 0.5s all;
+  }
+
+
+  .hero_button_about:hover{
+    padding: 1rem 6.5rem;
+  }
+
+  .hero_button_about:active{
+    padding: 1rem 4.5rem;
+    color: #ffffff7f;
+  }
+
+  .hero_button_arrow{
+    opacity: 0;
+  }
+
+  .hero_button_about:active .hero_button_arrow{
+    margin-left: 1.5rem;
+    transition: 0.5s all;
+    opacity: 0;
+  }
+  
+  .hero_banter{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-decoration: none;
+    margin: 0 0 15px 0;
+    color: var(--white);
+    transition: 0.5s all;
+  }
+  
+  .hero_subtitle{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 350;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.5s all;
+  }
+  
+  .hero_announcement{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.5s all;
+    text-align: center;
+    background: var(--announcement-banner-gradient);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem 0;
+    opacity: 1;
+    animation: fade_in_announcement 0.5s ease-in-out ;
+    overflow: hidden;
+  }
+  
+  @keyframes fade_in_announcement {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes bounce{
+    from { transform: translate3d(0, 2px, 0);}
+    to { transform: translate3d(0, -2px, 0);}
+}
+
+@keyframes bounce-r{
+  from { transform: translate3d(2px, 0, 0);}
+  to { transform: translate3d(-2px, 0, 0);}
+}
+
+  .hero_announcement_hidden{
+    opacity: 0;
+    transition: 0.5s all;
+  }
+  
+  .hero_announcement_text{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 700;
+  }
+  
+  .hero_announcement_close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  

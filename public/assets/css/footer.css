@@ -1,0 +1,17 @@
+.footer_main{
+    background-color: var(--background-secondary);
+    padding: 10px 20px;
+    height: 300px;
+    width: 100%;
+    margin-top: auto;
+    color: var(--text);
+    align-self: flex-end;
+  }
+  
+  .footer_bottom_als{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  

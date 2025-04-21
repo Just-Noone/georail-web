@@ -1,0 +1,122 @@
+
+.about{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .about_members, .about_date, .about_rank{
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+  }
+  
+  .about_members:hover, .about_date:hover, .about_rank:hover{
+    box-shadow: 0 0 20px var(--background-secondary);
+    transition: all 0.5s ease;
+  }
+  
+  .about_content{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 70%;
+    height: fit-content;
+    padding: 4em 1em 4em 4em;
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text2);
+  }
+  
+  .about_server_details{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 30%;
+    padding: 4em 4em 4em 1em;
+    justify-content: center;
+  }
+  
+  .about_server_details > *{
+    background-color: var(--background-secondary);
+    padding: 0.5em;
+    height: 23%;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--text2);
+  }
+  
+  .about_server_details > *:hover{
+    background-color: var(--tertiary);
+    scale: 102%;
+  }
+  
+  
+  
+  .about_server_details > *:hover > p{
+    color: var(--white);
+  }
+  
+  .about_server_details > *:hover > h3{
+    background-color: var(--white);
+  }
+  
+  .about_server_details > * > h3{
+    background: var(--tertiary);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5em;
+    font-weight: 800;
+  }
+  
+  .about_text{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text);
+  }
+  
+  .about_text p{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text);
+  }
+  
+  .about_divider{
+    margin-bottom: 0.1em;
+  }
+  
+  .about_title{
+    font-family: 'Sofia Pro', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: var(--text);
+    position: relative;
+    width: fit-content;
+  }
+  
+  .about_title::after{
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    position: inherit;
+    left: 0;
+    bottom: 7px;
+    background: var(--primary-gradient);
+    margin: 0;
+    margin-top: 2px;
+  }
+  
+  .about_title:hover ::after{
+    width: 300px;
+  }
