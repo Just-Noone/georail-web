@@ -1,21 +1,16 @@
-const http = require('http');
 const express = require('express');
 const app = express();
-const server = http.createServer(app);
-const { Server } = require("socket.io");
-const io = new Server(server);
+const path = require('path');
 
+// Serve 'public' directory as the root
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Send index.html on root request
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-io.on('connection', (socket) => {
-    console.log('a user connected');
-    socket.on('disconnect', () => {
-        console.log('user disconnected');
-    });
-});
-
-server.listen(3000, () => {
-    console.log('listening on *:3000');
+const PORT = 15500;
+app.listen(PORT, () => {
+  console.log(`Server running at http://127.0.0.1:${PORT}`);
 });

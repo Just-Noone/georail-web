@@ -39,11 +39,21 @@
     
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden; /* Prevent default scrolling */
+}
+
 body {
     background: var(--background);
     font-family: 'Sofia Pro', sans-serif;
     transition: all 0.5s;
   overflow-x: hidden;
+}
+
+#body {
+  overflow: auto; /* Enable scrolling for the smoother wrapper */
+  height: 100%;
 }
 
 body::-webkit-scrollbar {
@@ -93,54 +103,73 @@ html {
   }
 
   .main_cookies{
-    display: flex;
-    width: 400px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-    justify-content: center;
+    display: flex !important;
+    width: 400px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    justify-content: center !important;
     
   }
 
   .cookies_center{
-    position: fixed;
-    bottom: 0;
-    left: calc(50vw - 50vw);
-    width: 100vw;
-    z-index: 1000000000000000000001;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: calc(50vw - 50vw) !important;
+    width: 100vw !important;
+    z-index: 1000000000000000000001 !important;
   }
 
   .about{
-    flex-direction: column;
+    flex-direction: column !important;
   }
 
   .about_content{
-    width: 100%;
-    padding: 2em 2em 5px 2em;
+    width: 100% !important;
+    padding: 2em 2em 5px 2em !important;
   }
 
   .about_server_details{
-    width: 100%;
-    margin: 0;
-    padding: 2em;
-    flex-direction: column;
-    table-layout: fixed;
-    overflow-x: scroll;
-    overflow: hidden;
-    justify-content: space-evenly;
-    height: 100%;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 2em !important;
+    flex-direction: column !important;
+    table-layout: fixed   !important;
+    overflow: hidden !important;
+    overflow-x: scroll !important;
+    overflow: hidden  !important;
+    display: flex !important;
+    justify-content: space-evenly !important;
+    height: 100% !important;
   }
 
   .about_server_details > *{
-    width: 100%;
-    height: 200px;
+    width: 100% !important;
+    height: 200px !important;
+    padding: 2em 0 !important;
   }
 
   .screenshots_main{
-    margin: 2em;
-    width: unset;
-    padding: 0;
+    margin: 2em !important;
+    width: unset !important;
+    padding: 0 !important;
   }
+
+  .screenshots_frame{
+    width: 100% !important;
+    height: fit-content !important;
+    padding: 2em !important;
+    background-size: cover !important;
+    background-position: center right !important;
+  }
+
+  .ss_subtitle {
+    font-size: 1rem !important;
+  }
+  .ss_banter {
+    font-size: 1.8rem !important;
+  }
+
 }
 
 
@@ -170,7 +199,7 @@ html {
 
 
 
- 
+
 /**Footer**/
 
 
@@ -182,25 +211,15 @@ html {
   }
 
   .hero_announcement{
-    padding: 1rem 1.6em;
+    padding: 1rem 1.6em !important;
   }
 
   .ss_button_about{
-    font-family: 'Sofia Pro', sans-serif;
-    font-weight: 500;
-    font-size: 0.8rem;
-    text-decoration: none;
-    padding: 1rem 1rem;
-    border-radius: 10000px;
-    border: none;
-    background: var(--secondary-gradient);
-    color: var(--white);
-    transition: 0.5s all;
-    outline: none;
-    cursor: pointer;
-    width: fit-content;
-    width: 100%;
-    text-wrap-mode: nowrap;
+    font-size: 0.9rem !important;
+    padding: 1rem 2rem !important;
+    width: 100% !important;
+    position: relative !important;
+    text-align: center !important;
   }
 
   .about_content{
