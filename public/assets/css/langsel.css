@@ -1,25 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-.language_sel_container{
-    display: flex;
-    flex-direction: row;
-    border-radius: 2000px;
-    align-items: center;
-    width: fit-content;
-    background-color: var(--background-tertiary);
-  }
-  
-  .lang_select_main{
-    background-color: var(--background);
-    color: var(--text2);
-    font-family: 'Sofia Pro', sans-serif;
-    font-weight: 600;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 100px;
-    outline: none;
-  }
+.language-switcher {
+  position: relative;
+  width: 250px;
+  border-radius: 5000px;
+  background: var(--background);
+  cursor: pointer;
+  padding: 0 20px;
+}
 
-  .lang_select_main:focus{
-    outline: none;
-  }  
+.selected-lang {
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lang-options-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid var(--background-secondary);
+  border-radius: 15px;
+  background: var(--background);
+  z-index: 1000;
+  display: block; /* Always visible */
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  overflow: hidden;
+}
+
+.lang-options-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+
+.lang-options {
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.lang-options::-webkit-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  overflow: hidden;
+  display: none;
+}
+
+.lang-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--gray);
+  text-align: left;
+}
+
+.lang-option:hover {
+  background-color: var(--background-tertiary);
+  color: var(--text-primary);
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.progress-bar-container {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.lang-progress {
+  font-weight: bold;
+  margin-left: auto;
+}
+
+.lang-progress.blue, .lang-progress.green, .lang-progress.yellow, .lang-progress.orange, .lang-progress.red, .lang-progress.magenta {
+  padding: 3px 8px;
+  border-radius: 500px;
+  color: white;
+  font-weight: 400;
+}
+
+.lang-progress.blue {
+  background-color: var(--blue);
+}
+
+.lang-progress.green {
+  background-color: var(--green);
+}
+
+.lang-progress.yellow {
+  background-color: var(--yellow);
+}
+
+.lang-progress.orange {
+  background-color: var(--orange);
+}
+
+.lang-progress.red {
+  background-color: var(--red);
+}
+
+.lang-progress.magenta {
+  background-color: var(--magenta);
+}

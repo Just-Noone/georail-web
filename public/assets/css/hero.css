@@ -60,6 +60,43 @@
     height: fit-content;
     z-index: 10000;
   }
+
+  @media screen and (max-width: 768px) {
+    .hero_button_about{
+      font-family: 'Sofia Pro', sans-serif;
+      font-weight: 500;
+      font-size: 1.3rem;
+      text-decoration: none;
+      padding: 1rem 3rem !important;
+      border-radius: 10000px;
+      border: none;
+      background: var(--primary-gradient);
+      color: var(--white);
+      transition: 0.5s all;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .about_link_hug{
+      width: fit-content;
+    }
+
+    .hero_button_about:hover{
+      padding: 1rem 4.5rem !important;
+    }
+    
+  }
+
+  .about_link_hug{
+    color: white; 
+    text-decoration: none; 
+    height: 100%; 
+    width: fit-content;
+    display: block;
+    display: flex;
+    align-items: flex-start;
+  }
   
   .hero_button_about{
     font-family: 'Sofia Pro', sans-serif;
@@ -89,7 +126,7 @@
   
   .hero_button_about:hover .hero_button_arrow{
     opacity: 1;
-    margin-left: 3.5rem;
+    margin-left: 20px;
     transition: 0.5s all;
   }
 

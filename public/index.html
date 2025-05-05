@@ -43,27 +43,42 @@
     <meta name="theme-color" content="#FFBC40" />
     <link rel="icon" href="/assets/img/Geo.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/assets/img/Geo.svg" type="image/svg+xml">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/all.min.js" integrity="sha512-fxASHhXi6WjjUR9Hr8qt2IxNW2AzyZOpoPi4+UgVU0lTFNKMQ8INkZaQ5ZED2aAldHuHNaLlaHuwQ1oGT+LHhw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://kit.fontawesome.com/4665486849.js" crossorigin="anonymous"></script>
+<!-- Progressbar.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
+
+<!-- Language switcher -->
+<script src="/assets/js/translate.js"></script>
 </head>
 <body id="body">
 
-  <!--Cookies banner-->
+    <!--Loading screen-->
 
-  <div class="cookies_center">
-  <div class="main_cookies" id="cookie_frame">
-    <div class="cookies_content">
-      <p class="cookies_text" id="cookies_text" data-translate-id="cookies_text">We use Cookies for statistics, like how much and when our website was used as well as for outage tracking. Those cookies are required for the website to function. </p>
-      <button class="cookies_button" id="cookies_close" data-translate-id="cookies_close">Accept</button>
-      <button class="cookies_button_decline" id="cookies_close_decl" data-translate-id="cookies_close_decl">Decline</button>
+    <div class="loader_screen" id="loading-screen">
+      <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/bouncy.js"></script>
+  
+      <l-bouncy
+          size="65"
+          speed="1.75"
+          color="white" 
+      ></l-bouncy>
+  
+      <script>
+        // Remove loading screen after all assets are loaded
+        window.addEventListener('load', function() {
+          const loadingScreen = document.getElementById('loading-screen');
+          const content = document.getElementById('body');
+          loadingScreen.style.display = 'none';  // Hide loading screen
+          content.style.display = 'block';       // Show content
+        });
+      </script>
     </div>
-  </div>
-</div>
 
- <!--Navbar-->
 
-  <div class="nav_container">
+   <!--Navbar-->
+
+   <div class="nav_container">
     <div class="nav_main">
       <div class="nav_content">
         <li class="nav_logo_1"><img src="/assets/img/Geo.svg" alt="logo" class="nav_logo"><a href="/public/index.html" class="nav_logo_text">GeoRail</a></li>
@@ -94,6 +109,22 @@
 
   </div>
 
+  <div class="cookies_center">
+    <div class="main_cookies" id="cookie_frame">
+      <div class="cookies_content">
+        <p class="cookies_text" id="cookies_text" data-translate-id="cookies_text">We use Cookies for statistics, like how much and when our website was used as well as for outage tracking. Those cookies are required for the website to function. </p>
+        <button class="cookies_button" id="cookies_close" data-translate-id="cookies_close">Accept</button>
+        <button class="cookies_button_decline" id="cookies_close_decl" data-translate-id="cookies_close_decl">Decline</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Cookies banner-->
+
+
+
+
  <!--Hero-->
 
   <div class="hero">
@@ -107,7 +138,7 @@
       <p class="hero_subtitle" id="hero_title1" data-translate-id="hero_title1">MTR</p>
       <p class="hero_banter" id="hero_title2" data-translate-id="hero_title2">At its finest</p>
 
-      <a href="#about" style="color: white; text-decoration: none; height: 100%;">
+      <a href="#about" class="about_link_hug">
         <button class="hero_button_about">
           <span data-translate-id="nav_about">
             About
@@ -153,7 +184,7 @@
       <div class="about_server_details">
         <div class="about_members" id="about_box">
           <p data-translate-id="stats_over">Over</p>
-          <h3 id="countup-members" data-start="0" data-end="170" data-duration="3000" data-has-plus="true">170+</h3>
+          <h3 id="countup-members" data-start="0" data-end="200" data-duration="3000" data-has-plus="true">170+</h3>
           <p data-translate-id="stats_members">Members</p>
           <script src="/assets/js/countup-a.js"></script>
         </div>
@@ -196,73 +227,17 @@
 
   <!-- Partners -->
 
-
-
-  <!--Loading screen-->
-
-  <div class="loader_screen" id="loading-screen">
-    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/bouncy.js"></script>
-
-    <l-bouncy
-        size="65"
-        speed="1.75"
-        color="white" 
-    ></l-bouncy>
-
-    <script>
-      // Remove loading screen after all assets are loaded
-      window.addEventListener('load', function() {
-        const loadingScreen = document.getElementById('loading-screen');
-        const content = document.getElementById('body');
-        loadingScreen.style.display = 'none';  // Hide loading screen
-        content.style.display = 'block';       // Show content
-      });
-    </script>
-  </div>
-
-
   <!--Footer-->
 
   <footer class="footer_main">
 
     <div class="footer_top_names">
 
+      <div class="mobile_wrap_f">
       <div class="footer_top_geo">
         <p class="GeoFooter">GEORAIL</p>
       </div>      
     
-    
-
-
-    <div class="footer_bottom_als">
-
-      <div class="language_sel_container">
-        <i class="fa-solid fa-earth-europe" style="margin: 10px; margin-left: 15px; scale: 100%; transition: all 0s; color: var(--text2);"></i>
-
-        <div class="language_select">
-          <select id="languageSelector" class="lang_select_main">
-            <option value="en">English</option>
-            <option value="es">español</option>
-            <option value="de">Deutsch</option>
-            <option value="fr">français</option>
-            <option value="pt_br">Português brasileiro</option>
-            <option value="pt">Português Europeu</option>
-            <option value="it">Italiano</option>
-            <option value="pl">Polski</option>
-            <option value="nl">Nederlands</option>
-            <option value="cs">čeština</option>
-            <option value="ru">Русский</option>
-            <option value="hi">हिन्दी</option>
-            <option value="ar">عربي</option>
-            <option value="zh">繁體中文</option>
-            <option value="ja">日本語</option>
-          </select>
-        </div>
-      </div>
-
-
-
-
       <div class="toggle-switch">
         <label class="switch-label">
           <input type="checkbox" class="checkbox" id="toggleSwitch">
@@ -271,20 +246,31 @@
       </div>  
     </div>
 
+      <div class="language_wrapper">
+        <i class="fa-solid fa-earth-europe" style="width: 30px; color: var(--font);"></i>
+        <div class="language-switcher">
+          <div class="selected-lang">
+              <span class="lang-name">English</span>
+              <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="lang-options-container hidden">
+              <div class="lang-options">
+              </div>
+          </div>
+        </div>
+    </div>
+
+
+    </div>
+
     </div>
   </footer>
 
 
   <!-- JavaScript -->
 
-  <script src="/assets/js/translate-new.js" async defer></script>
   <script src="/assets/js/themeswitch.js"></script>
   <script src="/assets/js/fade.js"></script>
-  <script src="/assets/js/smooth-scroll.bundle.js" defer></script>
-
-<!-- GSAP and ScrollSmoother -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js" integrity="sha512-t4hwZimhnCKT3YLAsEcAcRDkngVFfCcUIfNLIjklrIZAZKD+GfQMP7HbRcsVHxNS48WRBSywNU1uSM2zzLQt1Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
   <!-- Google tag (gtag.js) -->

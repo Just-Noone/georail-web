@@ -36,6 +36,13 @@
     --text-size-large : 2.5rem;
     --text-size-medium : 1.5rem;
     --text-size-small : 1rem;
+
+    --magenta : #f022af;
+    --red : #f41b1f;
+    --orange : #ff7d26;
+    --yellow : #7a9114;
+    --green : #32d174;
+    --blue : #0e4deb;
     
 }
 
@@ -49,6 +56,7 @@ body {
     font-family: 'Sofia Pro', sans-serif;
     transition: all 0.5s;
   overflow-x: hidden;
+  overflow: hidden; /* IMPORTANT: Required by ScrollSmoother */
 }
 
 #body {
@@ -76,12 +84,61 @@ body::-webkit-scrollbar-thumb {
                      var(--background-tetriary);
   }
 }
+/* Core Smooth Scroll CSS */
+#smooth-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  -webkit-overflow-scrolling: touch;
+  background: #ffffff;
+  overscroll-behavior: none;
+}
 
+#smooth-content {
+  position: relative;
+  min-height: 100vh;
+  overflow: visible;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
 
+/* Content padding adjustment */
+#smooth-content > *:last-child {
+  padding-bottom: 20vh;
+}
+
+/* Base Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Sofia Pro', sans-serif;
+}
+
+/* Mobile Fallback */
+@media (max-width: 768px) {
+  #smooth-wrapper {
+    position: relative;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  #smooth-content {
+    overflow: visible;
+    min-height: auto;
+  }
+}
 
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    overflow: hidden; /* IMPORTANT: Required by ScrollSmoother */
 }
 
 * {

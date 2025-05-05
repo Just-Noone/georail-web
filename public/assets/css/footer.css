@@ -13,5 +13,42 @@
     justify-content: center;
     align-items: center;
   }
+
+  .footer_top_names{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .footer_top_names{
+      flex-direction: column;
+    }
+
+    .mobile_wrap_f{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
   
-  
+  .language_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--background-tertiary);
+    padding: 0 0 0 20px;
+    border-radius: 200px;
+  }
+
+  .mobile_wrap_f{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
