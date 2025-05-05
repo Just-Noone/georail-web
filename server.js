@@ -5,6 +5,9 @@ const path = require('path');
 // Serve 'public' directory as the root
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Serve Webpack output directory
+app.use('/assets/dist', express.static(path.join(__dirname, 'public/assets/dist')));
+
 // Send index.html on root request
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
