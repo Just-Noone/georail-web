@@ -72,18 +72,30 @@
   
   .cookies_button:hover{
     width: 97%;
+    filter: saturate(500%);
+-webkit-filter: saturate(500%);
+-moz-filter: saturate(500%);
   }
   
   .cookies_button:active{
     width: 102%;
     opacity: 0.9;
+    filter: sepia(50%) saturate(500%);
+    -webkit-filter: sepia(50%) saturate(500%);
+    -moz-filter: sepia(50%) saturate(500%);
   }
   
   .cookies_button_decline:hover{
     width: 97%;
+    filter: saturate(50%);
+-webkit-filter: saturate(50%);
+-moz-filter: saturate(50%);
   }
   
   .cookies_button_decline:active{
     width: 102%;
     opacity: 0.9;
+    filter: brightness(150%) saturate(50%);
+-webkit-filter: brightness(150%) saturate(50%);
+-moz-filter: brightness(150%) saturate(50%);
   }

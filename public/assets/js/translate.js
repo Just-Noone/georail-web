@@ -104,11 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function getProgressColor(progress) {
         if (progress > 90) return 'blue';
-        if (progress >= 70) return 'green';
-        if (progress >= 50) return 'yellow';
-        if (progress >= 30) return 'orange';
-        if (progress >= 10) return 'magenta';
-        return 'red';
+        if (progress >= 60) return 'green';
+        if (progress >= 40) return 'yellow';
+        if (progress >= 20) return 'orange';
+        if (progress >= 10) return 'red';
+        return 'magenta'; // Default color for 0% progress
     }
 
     /**
