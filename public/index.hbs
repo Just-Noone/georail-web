@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#FFBC40" />
+    <meta name='keywords' content='railways, georail, gr, georailways, geo, train, minecraft, server, minecraft server'>
+    <title>GeoRail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/sofia-pro" rel="stylesheet" rel="preload">
+
+    <link href="/assets/css/index.css" rel="stylesheet" rel="preload">
+    <link href="/assets/css/about.css" rel="stylesheet" rel="preload">
+    <link href="/assets/css/cookies.css" rel="stylesheet" rel="preload">
+    <link href="/assets/css/footer.css" rel="stylesheet" rel="preload">
+    <link href="/assets/css/hero.css" rel="stylesheet" rel="preload">
+    <link href="/assets/css/langsel.css" rel="stylesheet" rel="preload">
+    <link href="/assets/css/ldtoggle.css" rel="stylesheet" rel="preload">
+    <link href="/assets/css/nav.css" rel="stylesheet" rel="preload">
+    <link href="/assets/css/screenshots.css" rel="stylesheet" rel="preload">
+
+    <meta name="twitter:title" content="GeoRail">
+    <meta name="twitter:description" content="GeoRail is a server full of vibrant, creative high quality builds.
+    All builds are carefully polished up to massive quality. GeoRail is one of the biggest MTR
+    server featuring many famous MTR builders like Szandor13, Vitor2005, BitOne and Damián Salaba
+
+    The GeoRail server features a various spectre of styles. From Asian to European. We are
+    welcoming everybody. ">
+    <meta name="twitter:image" content="/assets/img/Geo.png">
+    <meta name="twitter:card" content="/assets/img/BannerNew.png">
+    <meta name="twitter:site" content="@GeoRail">
+    <meta name="twitter:creator" content="@GeoRail">
+    <meta property="og:title" content="GeoRail" />
+    <meta property="og:description" content="GeoRail is a server full of vibrant, creative high quality builds.
+    All builds are carefully polished up to massive quality. GeoRail is one of the biggest MTR
+    server featuring many famous MTR builders like Szandor13, Vitor2005, BitOne and Damián Salaba
+
+    The GeoRail server features a various spectre of styles. From Asian to European. We are
+    welcoming everybody. " />
+    <meta property="og:image" content="/assets/img/BannerNew.png" />
+    <meta property="og:url" content="https://georail.justnoone.eu/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="GeoRail" />
+    <meta name="theme-color" content="#FFBC40" />
+    <link rel="icon" href="/assets/img/Geo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/img/Geo.svg" type="image/svg+xml">
+
+    <script src="https://kit.fontawesome.com/4665486849.js" crossorigin="anonymous"></script>
+<!-- Progressbar.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
+
+<!-- Language switcher -->
+<script src="/assets/js/translate.js"></script>
+</head>
+<body id="body">
+
+    <!--Loading screen-->
+
+    <div class="loader_screen" id="loading-screen">
+      <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/bouncy.js"></script>
+  
+      <l-bouncy
+          size="65"
+          speed="1.75"
+          color="white" 
+      ></l-bouncy>
+  
+      <script>
+        // Remove loading screen after all assets are loaded
+        window.addEventListener('load', function() {
+          const loadingScreen = document.getElementById('loading-screen');
+          const content = document.getElementById('body');
+          loadingScreen.style.display = 'none';  // Hide loading screen
+          content.style.display = 'block';       // Show content
+        });
+      </script>
+    </div>
+
+
+   <!--Navbar-->
+
+   <div class="nav_container">
+    <div class="nav_main">
+      <div class="nav_content">
+        <li class="nav_logo_1"><img src="/assets/img/Geo.svg" alt="logo" class="nav_logo"><a href="/public/index.html" class="nav_logo_text">GeoRail</a></li>
+        <li class="nav_divider_"><div class="nav_divider"></div></li>
+        <li><a href="./index.html#about" class="nav_link" id="nav_about" data-translate-id="nav_about">About</a></li>
+        <li class="nav_dropdown_main">
+          <a href="#" class="nav_link"><span id="nav_server" data-translate-id="nav_server">Server</span> <i class="fa-solid fa-caret-down" style="transition: 0s all;"></i> </a>
+            <ul class="nav_dropdown">
+
+              <li><a href="./dynmap.html" class="nav_link" id="nav_dynmap" data-translate-id="nav_dynmap">Dynmap</a></li>
+              <li><a href="./system.html" class="nav_link" id="nav_sysmap" data-translate-id="nav_sysmap">System map</a></li>
+              <li><a href="./join.html" class="nav_link" id="nav_joininstructions" data-translate-id="nav_joininstructions">How to join?</a></li>
+              <li><a href="https://discord.gg/hNnkANUz8S" class="nav_link" id="nav_discord" data-translate-id="nav_discord">Discord</a></li>
+
+            </ul>
+          
+        </li>
+
+        <li>
+          <a href="./cities.html" class="nav_link" id="nav_cities" data-translate-id="nav_cities">Cities</a>
+        </li>
+
+        <li>
+          <a href="./railways.html" class="nav_link" id="nav_railways" data-translate-id="nav_railways">Railways</a>
+        </li>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cookies_center">
+    <div class="main_cookies" id="cookie_frame">
+      <div class="cookies_content">
+        <p class="cookies_text" id="cookies_text" data-translate-id="cookies_text">We use Cookies for statistics, like how much and when our website was used as well as for outage tracking. Those cookies are required for the website to function. </p>
+        <button class="cookies_button" id="cookies_close" data-translate-id="cookies_close">Accept</button>
+        <button class="cookies_button_decline" id="cookies_close_decl" data-translate-id="cookies_close_decl">Decline</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Cookies banner-->
+
+
+
+
+ <!--Hero-->
+
+  <div class="hero">
+    <div class="hero_bg">
+      <img src="/assets/img/hero-dark.avif" alt="BG-d" class="hero_background-dark" loading="eager">
+      <img src="/assets/img/hero-light.avif" alt="BG-d" class="hero_background-light" loading="eager">
+    </div>
+
+    <div class="hero_foreground_container">
+    <div class="hero_foreground">
+      <p class="hero_subtitle" id="hero_title1" data-translate-id="hero_title1">MTR</p>
+      <p class="hero_banter" id="hero_title2" data-translate-id="hero_title2">At its finest</p>
+
+      <a href="#about" class="about_link_hug">
+        <button class="hero_button_about">
+          <span data-translate-id="nav_about">
+            About
+          </span>
+          
+          <span class="hero_button_arrow">
+            <i class="fa-solid fa-arrow-down"></i>
+          </span>
+        </button>
+      </a>
+
+    </div>
+    </div>
+
+    <div class="hero_announcement" id="hero_announcement">
+      <p class="hero_announcement_text" id="hero_announcement_title">Important announcement</p>
+      <p id="hero_announcement_text">Recently, as of 21th of April, the server had a reset, so expect not many finished builds yet.</p>
+      <button class="hero_announcement_close" id="hero_announcement_close">
+        <i class="fa-solid fa-xmark" style="color: white;"></i>
+      </button>
+    </div>
+
+  </div>
+
+  <!--About section-->
+
+  <div class="about" id="about">
+    <div class="about_content">
+      <h1 class="about_title" id="about_title" data-translate-id="">About</h1>
+
+      <p class="about_text" id="about_text">
+        <p id="abt1" data-translate-id="about_text1">GeoRail is a vibrant server known for its well known, high-quality builds that demonstrate the community's achievements with MTR. The community improves each build over time, with every detail playing a crucial role in ensuring it meets the highest standards of what MTR servers can achieve, making GeoRail a perfect choice among other MTR servers.</p>
+        <div class="about_divider" ></div>
+        <p id="abt2" data-translate-id="about_text2">As one of the largest and highest quality MTR servers, GeoRail is home to many talented builders, including Szandor13, Vitor2005, and BitOne. These people have built some of the most stunning and beautiful areas of GeoRail. We are a major player in the MTR server list, boasting 180+ members and over 1000 downloads on our packs, all while maintaining top quality.</p>
+        <div class="about_divider"></div>
+        <p id="abt3" data-translate-id="about_text3">Currently, the GeoRail server areas like Damaia, Jachowice, and Pilzen - Bor are perfected to the last detail, making them one of the best server choices!  </p>
+        <div class="about_divider"></div>
+        <p id="abt4" data-translate-id="about_text4">GeoRail welcomes everyone and provides a friendly and interactive community where you can unleash your creativity and let it go free! We are really happy to be one of your choices and we look forward to welcoming you! </p>
+        <div class="about_divider"></div>
+        <b id="abt5" data-translate-id="about_text5">See you in Geo!</b>
+      </p>
+      </div>
+      <div class="about_server_details">
+        <div class="about_members" id="about_box">
+          <p data-translate-id="stats_over">Over</p>
+          <h3 id="countup-members" data-start="0" data-end="{{members}}" data-duration="3000" data-has-plus="true">170+</h3>
+          <p data-translate-id="stats_members">Members</p>
+          <script src="/assets/js/countup-a.js"></script>
+        </div>
+        <div class="about_date" id="about_box">
+          <p data-translate-id="stats_at_its_finest_since">At it's finest since</p>
+          <h3>2024</h3>
+          
+          
+        </div>
+        <div class="about_rank" id="about_box">
+          <p data-translate-id="stats_over">Over</p>
+          <h3 id="countup-builders" data-start="0" data-end="20" data-duration="3000" data-has-plus="true">20+</h3>
+          <p data-translate-id="stats_builders">builders</p>
+          <script src="/assets/js/countup-b.js"></script>
+        </div>
+      </div>
+      <script src="/assets/js/about_3d.js"></script>
+  </div>
+
+  <!--Screenshots-->
+
+  <div class="screenshots_main">
+    <h1 class="ssb_title" id="ssb_title" data-translate-id="imf_images">Images</h1>
+    <div class="screenshots_frame" id="screenshots_frame">
+      <p class="ss_subtitle" id="ss_title1" data-translate-id="imf_headline_1">Some of our</p>
+      <p class="ss_banter" id="ss_title2" data-translate-id="imf_headline_2">Finest screenshots</p>
+
+
+        <button class="ss_button_about">
+          <a href="./gallery.html" style="color: white; text-decoration: none;">
+          <span style="color: white; text-decoration: none;" id="ss_about" data-translate-id="imf_button_visit">Visit our gallery</span>
+          <span class="ss_button_arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+          </span>
+        </a>
+        </button>
+
+    </div>
+  </div>
+
+  <!-- Partners -->
+
+  <!--Footer-->
+
+  <footer class="footer_main">
+
+    <div class="footer_top_names">
+
+      <div class="mobile_wrap_f">
+      <div class="footer_top_geo">
+        <p class="GeoFooter">GEORAIL</p>
+      </div>      
+    
+      <div class="toggle-switch">
+        <label class="switch-label">
+          <input type="checkbox" class="checkbox" id="toggleSwitch">
+          <span class="slider"></span>
+        </label>
+      </div>  
+    </div>
+
+      <div class="language_wrapper">
+        <i class="fa-solid fa-earth-europe" style="width: 30px; color: var(--font);"></i>
+        <div class="language-switcher">
+          <div class="selected-lang">
+              <span class="lang-name">English</span>
+              <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="lang-options-container hidden">
+              <div class="lang-options">
+              </div>
+          </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    </div>
+  </footer>
+
+
+  <!-- JavaScript -->
+
+  <script src="/assets/js/themeswitch.js"></script>
+  <script src="/assets/js/fade.js"></script>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CEMCD839LN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CEMCD839LN');
+  </script>
+</body>
+</html>

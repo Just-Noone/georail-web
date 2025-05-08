@@ -3,3 +3,4 @@
 /public/assets/env
 node_modules/
 .vercel
+.env
