@@ -122,9 +122,3 @@ body {
 .lang-progress.magenta {
   background-color: var(--magenta);
 }
-
-.lang-name{
-  font-size: 14px;
-  color: var(--text2);
-  font-weight: 500;
-}
