@@ -1,0 +1,50 @@
+The given text as ID	The translation to your language	An brief explanation of what it means
+nav_about	Rólunk	The link to our about page
+nav_server	Szerver	 The link to the server page
+nav_dynmap	Dynmap	The link to our dynmap site
+nav_sysmap	Vasúti térkép	Same for system map
+nav_joininstructions	Hogyan csatlakozzak?	Link to our join instructions
+nav_discord	Discord	Link to our discord
+nav_cities	Városok	Link to the cities page
+nav_railways	Járatok	As well as the Railways page
+		
+hero_title1	MTR	"MTR" the title you find on the start of the page
+hero_title2	A legjobb formában	"At its finest" The main title you find
+hero_about	Rólunk	The button below the titles on the hero
+hero_ann_title	Fontos Bejelentés	The announcement that pops up
+hero_ann_sub	A szerver jelenleg zárva van. Várható nyitás: április	And the content of the announcement
+cookies_text	Sütiket használunk, statisztika készítés céljából. Ezek elfogadási kötelező a továbblépéshez.	the text of the cookies
+ss_title1	Néhány	Screenshots title
+ss_title2	Legjobban sikerült képünk	Screenshots title
+ss_about	Látogasd meg a galériánk!	Screenshots title button
+cookies_close	Elfogadás	Cookies banner
+cookies_close_decl	Elutasítás	Cookies banner
+about_title	Rólunk	About us title
+about_text1	GeoRail egy rendkívül változatos szerver, mely híres a kidolgozott építményeiről, melyek bemutatják a közösség MTR-ral kapcsolatos tehetségét. Minden építmény folyamatos fejlődése, a részletek kidolgozottsága fontos szerepet tölt be annak érdekében, hogy kitűnjünk az MTR szerverek tömegéből, biztosítva, hogy GeoRail a tökéletes választás legyen az összes MTR szerver közül. 	
+about_text2	Az egyik legnagyobb és legjobb minőségű MTR szerverként a GeoRail számos tehetséges építő otthona, köztük Szandor13, Vitor2005 és BitOne. Ezek az emberek a GeoRail leglenyűgözőbb és legszebb területeit építették fel. Jelentős szereplők vagyunk az MTR szerverek listáján, több mint 200 taggal és 1000 modpack-letöltéssel. Mind ezt a csúcsminőséget megőrizve.	
+about_text3	A jelenlegi GeoRail helyszínek, mint például Damaia, Jachowice és Pilzen - Bor a legapróbb részletekig tökéletesítettek, így az egyik legjobb szerverválasztás!	
+about_text4	A GeoRail mindenkit szeretettel vár, egy barátságos és interaktív közösség fenntartásának céljából, ahol mindenki szabadjára engedheti kreativitását! GeoRail vár rád!	
+about_text5	Geo-n találkozunk!	
+stats_over	Több, mint	
+stats_members	Tagok	
+stats_at_its_finest_since	A legjobb formában	
+stats_builders	Építészeink	
+imf_images	Képek	
+imf_headline_1	Néhány	
+imf_headline_2	Legjobban sikerült képünk	
+imf_button_visit	Látogast meg galériánkat	
+par_title	Partnereink	
+par_small_text	*Egyik valós céggel sem állunk jogi kapcsolatban, további részletek a GeoRail vállalatok oldalon hamarosan!	Include the *
+par_btn	Csatlakozz most	
+ftr_arr	Minden jog fenntartva	
+ftr_prp	Adatkezelési-szabályzat	
+ftr_rul	Szabályzat	
+ftr_imp	Megjelenési adatok	
+ftr_cnt	Fordulj hozzánk bizalommal	
+ftr_2_hme	Otthon	
+ftr_2_srv	Szerver	
+ftr_2_cts	Városok	
+ftr_2_rws	Vasút Vonalak	
+ftr_3_src	Források	
+ftr_3_bri	Márkaegység	
+ftr_3_uol	Használd a logónkat	

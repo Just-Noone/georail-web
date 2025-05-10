@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth;">
+<!DOCTYPE hbs>
+<hbs lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="theme-color" content="#FFBC40" />
@@ -44,12 +44,10 @@
     <link rel="icon" href="/assets/img/Geo.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/assets/img/Geo.svg" type="image/svg+xml">
 
-    <script src="https://kit.fontawesome.com/4665486849.js" crossorigin="anonymous"></script>
-<!-- Progressbar.js CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
+    <script src="https://kit.fontawesome.com/4665486849.js" crossorigin="anonymous" rel="preconnect"></script>
 
 <!-- Language switcher -->
-<script src="/assets/js/translate.js"></script>
+<script src="/assets/js/translate.js" rel="preconnect"></script>
 </head>
 <body id="body">
 
@@ -81,16 +79,16 @@
    <div class="nav_container">
     <div class="nav_main">
       <div class="nav_content">
-        <li class="nav_logo_1"><img src="/assets/img/Geo.svg" alt="logo" class="nav_logo"><a href="/public/index.html" class="nav_logo_text">GeoRail</a></li>
+        <li class="nav_logo_1"><img src="/assets/img/Geo.svg" alt="logo" class="nav_logo"><a href="/public/index.hbs" class="nav_logo_text">GeoRail</a></li>
         <li class="nav_divider_"><div class="nav_divider"></div></li>
-        <li><a href="./index.html#about" class="nav_link" id="nav_about" data-translate-id="nav_about">About</a></li>
+        <li><a href="./index.hbs#about" class="nav_link" id="nav_about" data-translate-id="nav_about">About</a></li>
         <li class="nav_dropdown_main">
           <a href="#" class="nav_link"><span id="nav_server" data-translate-id="nav_server">Server</span> <i class="fa-solid fa-caret-down" style="transition: 0s all;"></i> </a>
             <ul class="nav_dropdown">
 
-              <li><a href="./dynmap.html" class="nav_link" id="nav_dynmap" data-translate-id="nav_dynmap">Dynmap</a></li>
-              <li><a href="./system.html" class="nav_link" id="nav_sysmap" data-translate-id="nav_sysmap">System map</a></li>
-              <li><a href="./join.html" class="nav_link" id="nav_joininstructions" data-translate-id="nav_joininstructions">How to join?</a></li>
+              <li><a href="./dynmap.hbs" class="nav_link" id="nav_dynmap" data-translate-id="nav_dynmap">Dynmap</a></li>
+              <li><a href="./system.hbs" class="nav_link" id="nav_sysmap" data-translate-id="nav_sysmap">System map</a></li>
+              <li><a href="./join.hbs" class="nav_link" id="nav_joininstructions" data-translate-id="nav_joininstructions">How to join?</a></li>
               <li><a href="https://discord.gg/hNnkANUz8S" class="nav_link" id="nav_discord" data-translate-id="nav_discord">Discord</a></li>
 
             </ul>
@@ -98,11 +96,11 @@
         </li>
 
         <li>
-          <a href="./cities.html" class="nav_link" id="nav_cities" data-translate-id="nav_cities">Cities</a>
+          <a href="./cities.hbs" class="nav_link" id="nav_cities" data-translate-id="nav_cities">Cities</a>
         </li>
 
         <li>
-          <a href="./railways.html" class="nav_link" id="nav_railways" data-translate-id="nav_railways">Railways</a>
+          <a href="./railways.hbs" class="nav_link" id="nav_railways" data-translate-id="nav_railways">Railways</a>
         </li>
       </div>
     </div>
@@ -129,8 +127,8 @@
 
   <div class="hero">
     <div class="hero_bg">
-      <img src="/assets/img/hero-dark.avif" alt="BG-d" class="hero_background-dark" loading="eager">
-      <img src="/assets/img/hero-light.avif" alt="BG-d" class="hero_background-light" loading="eager">
+      <img src="/assets/img/hero-dark.avif" alt="BG-d" class="hero_background-dark" loading="eager" rel="preload">
+      <img src="/assets/img/hero-light.avif" alt="BG-d" class="hero_background-light" loading="eager" rel="preload">
     </div>
 
     <div class="hero_foreground_container">
@@ -201,7 +199,7 @@
           <script src="/assets/js/countup-b.js"></script>
         </div>
       </div>
-      <script src="/assets/js/about_3d.js"></script>
+      <script src="/assets/js/about_3d.js" rel="preconnect"></script>
   </div>
 
   <!--Screenshots-->
@@ -214,7 +212,7 @@
 
 
         <button class="ss_button_about">
-          <a href="./gallery.html" style="color: white; text-decoration: none;">
+          <a href="./gallery.hbs" style="color: white; text-decoration: none;">
           <span style="color: white; text-decoration: none;" id="ss_about" data-translate-id="imf_button_visit">Visit our gallery</span>
           <span class="ss_button_arrow">
             <i class="fa-solid fa-arrow-right"></i>
@@ -266,15 +264,17 @@
     </div>
   </footer>
 
+  <p>{{test}}</p>
+
+
 
   <!-- JavaScript -->
 
-  <script src="/assets/js/themeswitch.js"></script>
-  <script src="/assets/js/fade.js"></script>
-
+  <script src="/assets/js/themeswitch.js" rel="preconnect"></script>
+  <script src="/assets/js/fade.js" rel="preconnect"></script>
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CEMCD839LN"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CEMCD839LN" rel="preconnect"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -283,4 +283,4 @@
     gtag('config', 'G-CEMCD839LN');
   </script>
 </body>
-</html>
+</hbs>
