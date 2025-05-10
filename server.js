@@ -68,3 +68,6 @@ app.listen(PORT, () => {
 });
 // Export the app for Vercel
 module.exports = app;
+    // This will automatically look for index.hbs in the views directory
+    // and render it. No need to specify .hbs extension.
+})
