@@ -103,11 +103,10 @@ document.addEventListener('DOMContentLoaded', () => {
      * @returns {string} The color class name.
      */
     function getProgressColor(progress) {
-        if (progress > 90) return 'blue';
-        if (progress >= 70) return 'green';
-        if (progress >= 50) return 'yellow';
-        if (progress >= 30) return 'orange';
-        if (progress >= 10) return 'magenta';
+        if (progress >= 80) return 'green';
+        if (progress >= 60) return 'yellow';
+        if (progress >= 40) return 'orange';
+        if (progress >= 20) return 'magenta';
         return 'red';
     }
 

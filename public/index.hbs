@@ -1,5 +1,5 @@
-<!DOCTYPE hbs>
-<hbs lang="en" style="scroll-behavior: smooth;">
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="theme-color" content="#FFBC40" />
@@ -7,6 +7,9 @@
     <title>GeoRail</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.cdnfonts.com/css/sofia-pro" rel="stylesheet" rel="preload">
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+    <link rel="preload" href="/assets/css/index.css" as="style">
+    <link rel="preload" href="/assets/js/mobilemenu.js" as="script">
 
     <link href="/assets/css/index.css" rel="stylesheet" rel="preload">
     <link href="/assets/css/about.css" rel="stylesheet" rel="preload">
@@ -79,9 +82,9 @@
    <div class="nav_container">
     <div class="nav_main">
       <div class="nav_content">
-        <li class="nav_logo_1"><img src="/assets/img/Geo.svg" alt="logo" class="nav_logo"><a href="/public/index.hbs" class="nav_logo_text">GeoRail</a></li>
+        <li class="nav_logo_1"><img src="/assets/img/Geo.svg" alt="logo" class="nav_logo"><a href="/" class="nav_logo_text">GeoRail</a></li>
         <li class="nav_divider_"><div class="nav_divider"></div></li>
-        <li><a href="./index.hbs#about" class="nav_link" id="nav_about" data-translate-id="nav_about">About</a></li>
+        <li><a href="#about" class="nav_link" id="nav_about" data-translate-id="nav_about">About</a></li>
         <li class="nav_dropdown_main">
           <a href="#" class="nav_link"><span id="nav_server" data-translate-id="nav_server">Server</span> <i class="fa-solid fa-caret-down" style="transition: 0s all;"></i> </a>
             <ul class="nav_dropdown">
@@ -115,7 +118,7 @@
 
   <div class="mobilenav" id="mobnav">
     <div class="mobilenav_content">
-      <li><a href="./index.hbs#about" class="nav_link" id="mobnav_about" data-translate-id="nav_about">About</a></li>
+      <li><a href="#about" class="nav_link" id="mobnav_about" data-translate-id="nav_about">About</a></li>
       <li><a href="./dynmap.hbs" class="nav_link" id="mobnav_dynmap" data-translate-id="nav_dynmap">Dynmap</a></li>
       <li><a href="./system.hbs" class="nav_link" id="mobnav_sysmap" data-translate-id="nav_sysmap">System map</a></li>
       <li><a href="./join.hbs" class="nav_link" id="mobnav_joininstructions" data-translate-id="nav_joininstructions">How to join?</a></li>
@@ -145,8 +148,8 @@
 
   <div class="hero">
     <div class="hero_bg">
-      <img src="/assets/img/hero-dark.avif" alt="BG-d" class="hero_background-dark" loading="eager" rel="preload">
-      <img src="/assets/img/hero-light.avif" alt="BG-d" class="hero_background-light" loading="eager" rel="preload">
+      <img src="/assets/img/hero-dark.jpg" alt="BG-d" class="hero_background-dark" loading="lazy" rel="preload">
+      <img src="/assets/img/hero-light.jpg" alt="BG-l" class="hero_background-light" loading="lazy" rel="preload">
     </div>
 
     <div class="hero_foreground_container">
@@ -302,4 +305,4 @@
     gtag('config', 'G-CEMCD839LN');
   </script>
 </body>
-</hbs>
+</HTML>

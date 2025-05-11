@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const handlebars = require('express-handlebars');
+const compression = require('compression');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -15,7 +16,13 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'public')); // Use public for .hbs files
 
 // Serve static files from public/assets, public/img, etc.
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), {
+  maxAge: '30d',
+  immutable: true
+}));
+
+// Use compression middleware
+app.use(compression());
 
 // Render any .hbs file in /public by its name (e.g. /gallery -> gallery.hbs)
 app.get('/:page?', (req, res, next) => {

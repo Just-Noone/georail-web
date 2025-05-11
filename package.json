@@ -14,15 +14,17 @@
   "dependencies": {
     "@vercel/node": "^5.1.16",
     "axios": "^1.8.4",
+    "compression": "^1.8.0",
     "countup.js": "^2.8.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-handlebars": "^8.0.3",
     "gsap": "^3.13.0",
-    "mongoose": "^8.14.1",
-    "handlebars": "^4.7.7" 
+    "handlebars": "^4.7.7",
+    "mongoose": "^8.14.1"
   },
   "devDependencies": {
+    "esbuild": "0.25.4",
     "gh-pages": "^6.3.0",
     "nodemon": "^3.1.10"
   }
