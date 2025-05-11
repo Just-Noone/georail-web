@@ -227,6 +227,10 @@ html {
     font-size: 1.8rem !important;
   }
 
+  .nav_burger{
+    display: block !important;
+  }
+
 }
 
 

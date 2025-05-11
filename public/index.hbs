@@ -41,8 +41,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="GeoRail" />
     <meta name="theme-color" content="#FFBC40" />
-    <link rel="icon" href="/assets/img/Geo.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/assets/img/Geo.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/Geo.svg" type="image/svg+xml">
 
     <script src="https://kit.fontawesome.com/4665486849.js" crossorigin="anonymous" rel="preconnect"></script>
 
@@ -93,6 +93,8 @@
 
             </ul>
           
+
+
         </li>
 
         <li>
@@ -103,8 +105,24 @@
           <a href="./railways.hbs" class="nav_link" id="nav_railways" data-translate-id="nav_railways">Railways</a>
         </li>
       </div>
+
+      <li class="nav_burger" id="nav_burger">
+        <i class="fa-solid fa-bars"></i>
+      </li>
     </div>
 
+  </div>
+
+  <div class="mobilenav" id="mobnav">
+    <div class="mobilenav_content">
+      <li><a href="./index.hbs#about" class="nav_link" id="mobnav_about" data-translate-id="nav_about">About</a></li>
+      <li><a href="./dynmap.hbs" class="nav_link" id="mobnav_dynmap" data-translate-id="nav_dynmap">Dynmap</a></li>
+      <li><a href="./system.hbs" class="nav_link" id="mobnav_sysmap" data-translate-id="nav_sysmap">System map</a></li>
+      <li><a href="./join.hbs" class="nav_link" id="mobnav_joininstructions" data-translate-id="nav_joininstructions">How to join?</a></li>
+      <li><a href="https://discord.gg/hNnkANUz8S" class="nav_link" id="mobnav_discord" data-translate-id="nav_discord">Discord</a></li>
+      <li><a href="./cities.hbs" class="nav_link" id="mobnav_cities" data-translate-id="nav_cities">Cities</a></li>
+      <li><a href="./railways.hbs" class="nav_link" id="mobnav_railways" data-translate-id="nav_railways">Railways</a></li>
+    </div>
   </div>
 
   <div class="cookies_center">
@@ -199,7 +217,7 @@
           <script src="/assets/js/countup-b.js"></script>
         </div>
       </div>
-      <script src="/assets/js/about_3d.js" rel="preconnect"></script>
+      <script src="/assets/js/about_3d.js"></script>
   </div>
 
   <!--Screenshots-->
@@ -270,6 +288,7 @@
 
   <!-- JavaScript -->
 
+  <script src="/assets/js/mobilemenu.js" rel="preconnect"></script>
   <script src="/assets/js/themeswitch.js" rel="preconnect"></script>
   <script src="/assets/js/fade.js" rel="preconnect"></script>
 
