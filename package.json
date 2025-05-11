@@ -21,7 +21,8 @@
     "express-handlebars": "^8.0.3",
     "gsap": "^3.13.0",
     "handlebars": "^4.7.7",
-    "mongoose": "^8.14.1"
+    "mongoose": "^8.14.1",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "esbuild": "0.25.4",
