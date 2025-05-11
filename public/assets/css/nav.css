@@ -7,6 +7,9 @@
   position: fixed;
   z-index: 1000000000000000000;
   padding: 0 2em;
+  position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .nav_main {

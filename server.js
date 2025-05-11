@@ -63,12 +63,17 @@ app.get('/:page?', (req, res, next) => {
   res.render(page, { title: 'GeoRail' }, (err, html) => {
     if (err) {
       if (err.message.includes('Failed to lookup view')) {
-        return res.status(404).send('404: Page Not Found');
+        return res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
       }
       return next(err);
     }
     res.send(html);
   });
+});
+
+// Custom 404 handler for all other unmatched routes
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 });
 
 // Export the app for Vercel
