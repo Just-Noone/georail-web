@@ -6,7 +6,7 @@ nav_sysmap	Схема маршрутов	Same for system map
 nav_joininstructions	Как присоединиться?	Link to our join instructions
 nav_discord	Дискорд	Link to our discord
 nav_cities	Города	Link to the cities page
-nav_railways	Железные дороги 	As well as the Railways page
+nav_railways	Железная дорога	As well as the Railways page
 		
 hero_title1	MTR	"MTR" the title you find on the start of the page
 hero_title2	В лучшем виде	"At its finest" The main title you find
@@ -21,7 +21,30 @@ cookies_close	Принять	Cookies banner
 cookies_close_decl	Отказаться	Cookies banner
 about_title	О нас	About us title
 about_text1	GeoRail - это энергичный сервер, известный своими качественными высококлассными постройками, которые демонстрируют достижения сообщества в MTR. Сообщество постоянно улучшает сборку, которая играет решающую роль в обеспечении соответствия самым высоким стандартам MTR серверов, что делает GeoRail идеальным выбором среди конкурентов. 	
-about_text2	Являясь одним из крупнейших высококлассных MTR СЕРВЕРОВ, GeoRail является домом для многих талантливых строителей, включая Szandor13, Vitor2005 и BitOne. Эти люди построили одни из самых уникальных и завораживающих районов GeoRail. Мы являемся крупным игроком в MTR сообществе, можем похвастаться +180 участниками и более 1000 скачиваний наших паков, при этом сохроняя высочайшее качество	
+about_text2	Являясь одним из крупнейших высококлассных MTR серверов, GeoRail является домом для многих талантливых строителей, включая Szandor13, Vitor2005 и BitOne. Эти люди построили одни из самых уникальных и завораживающих районов GeoRail. Мы являемся крупным игроком в MTR сообществе, можем похвастаться +180 участниками и более 1000 скачиваний наших паков, при этом сохроняя высочайшее качество	
 about_text3	На данный момент на сервере такие зоны, как Дамиа, Яховице и Пильзень - Бор проработаны до мелочей, что делает их лучшим вариантом для посещения!	
 about_text4	GeoRail приветствует всех и предоставляет дружественное и отзывчивое сообщество, где вы можете раскрыть свой творческий потенциал и дать ему волю! Мы очень рады быть одним из ваших вариантов и с нетерпением ждем вас на сервере!	
 about_text5	Увидимся на Geo!	
+stats_over	Больше	
+stats_members	Пользователей	
+stats_at_its_finest_since	В лучшем виде с	
+stats_builders	Строиетелей	
+imf_images	Скрины	
+imf_headline_1	Некоторые из наших	
+imf_headline_2	Красивых скриншотов	
+imf_button_visit	Посетить нашу галлерею	
+par_title	Наши партнеры	
+par_small_text	*Реальные компании НЕ являются реальными партнерами, больше информации на странице  Real companies are NOT real affiliates, more details in GeoRail Companies page soon!	Include the *
+par_btn	Be on that list	
+ftr_arr	Все права защищены	
+ftr_prp	Политика конфиденциальности	
+ftr_rul	Правила	
+ftr_imp	Imprint	
+ftr_cnt	Связаться с нами	
+ftr_2_hme	Домой	
+ftr_2_srv	Сервер	
+ftr_2_cts	Города	
+ftr_2_rws	Железная дорога	
+ftr_3_src	Источник	
+ftr_3_bri	Наш фирменный стиль	
+ftr_3_uol	Использование нашего лого	

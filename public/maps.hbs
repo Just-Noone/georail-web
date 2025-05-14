@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#FFBC40" />
+    <meta name='keywords' content='railways, georail, gr, georailways, geo, train, minecraft, server, minecraft server'>
+    <title>GeoRail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/sofia-pro" rel="stylesheet" rel="preload">
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+    <link rel="preload" href="/assets/css/index.css" as="style">
+    <link rel="preload" href="/assets/js/mobilemenu.js" as="script">
+    <link rel="robots" href="/robots.txt">
+
+    <link href="/assets/css/index.css" rel="stylesheet" rel="preload">
+    <link href="/assets/css/about.css" rel="stylesheet" rel="preload">
+    <link href="/assets/css/cookies.css" rel="stylesheet">
+    <link href="/assets/css/footer.css" rel="stylesheet" rel="preload">
+    <link href="/assets/css/hero.css" rel="stylesheet" rel="preload">
+    <link href="/assets/css/langsel.css" rel="stylesheet" rel="preload">
+    <link href="/assets/css/screenshots.css" rel="stylesheet" rel="preload">
+    <link href="/assets/css/map.css" rel="stylesheet" rel="preload">
+
+    <meta name="twitter:title" content="GeoRail">
+    <meta name="twitter:description" content="GeoRail is a server full of vibrant, creative high quality builds.
+    All builds are carefully polished up to massive quality. GeoRail is one of the biggest MTR
+    server featuring many famous MTR builders like Szandor13, Vitor2005, BitOne and Damián Salaba
+
+    The GeoRail server features a various spectre of styles. From Asian to European. We are
+    welcoming everybody. ">
+    <meta name="twitter:image" content="/assets/img/Geo.png">
+    <meta name="twitter:card" content="/assets/img/BannerNew.png">
+    <meta name="twitter:site" content="@GeoRail">
+    <meta name="twitter:creator" content="@GeoRail">
+    <meta property="og:title" content="GeoRail" />
+    <meta property="og:description" content="GeoRail is a server full of vibrant, creative high quality builds.
+    All builds are carefully polished up to massive quality. GeoRail is one of the biggest MTR
+    server featuring many famous MTR builders like Szandor13, Vitor2005, BitOne and Damián Salaba
+
+    The GeoRail server features a various spectre of styles. From Asian to European. We are
+    welcoming everybody. " />
+
+        <meta name="description" content="GeoRail is a server full of vibrant, creative high quality builds.
+    All builds are carefully polished up to massive quality. GeoRail is one of the biggest MTR
+    server featuring many famous MTR builders like Szandor13, Vitor2005, BitOne and Damián Salaba
+
+    The GeoRail server features a various spectre of styles. From Asian to European. We are
+    welcoming everybody. " />
+    <meta property="og:image" content="/assets/img/BannerNew.png" />
+    <meta property="og:url" content="https://georail.justnoone.eu/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="GeoRail" />
+    <meta name="theme-color" content="#FFBC40" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/img/Geo.svg" type="image/svg+xml">
+
+    <script src="https://kit.fontawesome.com/4665486849.js" crossorigin="anonymous" rel="preconnect"></script>
+    <link rel="stylesheet" href="/assets/css/map.css">
+</head>
+<body>
+
+      <!--Loading screen-->
+
+    <div class="loader_screen" id="loading-screen">
+      <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/bouncy.js"></script>
+  
+      <l-bouncy
+          size="65"
+          speed="1.75"
+          color="white" 
+      ></l-bouncy>
+  
+      <script>
+        // Remove loading screen after all assets are loaded
+        window.addEventListener('load', function() {
+          const loadingScreen = document.getElementById('loading-screen');
+          const content = document.getElementById('body');
+          loadingScreen.style.display = 'none';  // Hide loading screen
+          content.style.display = 'block';       // Show content
+        });
+      </script>
+    </div>
+
+
+
+  <!-- Sliding Iframes -->
+  <div id="iframeWrapper" class="iframe-wrapper">
+    <iframe src="https://georail.justnoone.eu/proxy-map/"></iframe>
+    <iframe src="https://georail.justnoone.eu/proxy-system/"></iframe>
+  </div>
+
+  <!-- Floating Navigation Tabs -->
+  <div class="tab-container">
+    <div class="slider" id="slider"></div>
+    <button id="mapBtn" class="tab-button" onclick="switchTab('map')">Map</button>
+    <button id="systemBtn" class="tab-button inactive" onclick="switchTab('system')">System</button>
+  </div>
+
+  <div class="logo-container">
+    <a href="/index"><button class="logobtn">Home</button></a>
+  </div>
+
+  <script>
+    const iframeWrapper = document.getElementById('iframeWrapper');
+    const slider = document.getElementById('slider');
+    const mapBtn = document.getElementById('mapBtn');
+    const systemBtn = document.getElementById('systemBtn');
+
+    function updateUI(tab) {
+      if (tab === 'map') {
+        iframeWrapper.style.transform = 'translateX(0%)';
+        slider.style.transform = 'translateX(0%)';
+        mapBtn.classList.remove('inactive');
+        systemBtn.classList.add('inactive');
+      } else {
+        iframeWrapper.style.transform = 'translateX(-50%)';
+        slider.style.transform = 'translateX(100%)';
+        systemBtn.classList.remove('inactive');
+        mapBtn.classList.add('inactive');
+      }
+    }
+
+    function switchTab(tab) {
+      history.pushState({ tab }, '', '/' + tab);
+      updateUI(tab);
+    }
+
+    // Handle browser back/forward
+    window.addEventListener('popstate', (event) => {
+      const tab = event.state?.tab || (location.pathname.includes('system') ? 'system' : 'map');
+      updateUI(tab);
+    });
+
+    // On first load
+    const initialTab = location.pathname.includes('system') ? 'system' : 'map';
+    updateUI(initialTab);
+    history.replaceState({ tab: initialTab }, '', '/' + initialTab);
+  </script>
+    <!-- JavaScript -->
+  <script src="/assets/js/mobilemenu.js" rel="preconnect"></script>
+  <script src="/assets/js/themeswitch.js" rel="preconnect"></script>
+  <script src="/assets/js/fade.js" rel="preconnect"></script>
+  <script src="https://www.googletagmanager.com/gtag/js?id=G-CEMCD839LN" rel="preconnect"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CEMCD839LN');
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      try {
+        // Cookies banner logic
+        var closeBtn = document.getElementById("cookies_close");
+        var declineBtn = document.getElementById("cookies_close_decl");
+        var fadeDiv = document.getElementById("cookie_frame");
+
+        function hideBanner() {
+          if (fadeDiv) {
+            fadeDiv.classList.add("cookies_content_hidden");
+            fadeDiv.addEventListener('transitionend', function handler() {
+              fadeDiv.style.display = 'none';
+              fadeDiv.removeEventListener('transitionend', handler);
+            });
+          }
+        }
+
+        if (closeBtn) {
+          closeBtn.addEventListener("click", hideBanner);
+        }
+        if (declineBtn) {
+          declineBtn.addEventListener("click", hideBanner);
+        }
+
+        // Announcement banner logic
+        var announcementClose = document.getElementById("hero_announcement_close");
+        var announcementDiv = document.getElementById("hero_announcement");
+
+        function hideAnnouncement() {
+          if (announcementDiv) {
+            announcementDiv.classList.add("hero_announcement_hidden");
+            announcementDiv.addEventListener('transitionend', function handler() {
+              announcementDiv.style.display = 'none';
+              announcementDiv.removeEventListener('transitionend', handler);
+            });
+          }
+        }
+
+        if (announcementClose) {
+          announcementClose.addEventListener("click", hideAnnouncement);
+        }
+      } catch (e) {
+        // Optionally log the error
+        // console.error(e);
+      }
+    });
+  </script>
+
+</body>
+</html>

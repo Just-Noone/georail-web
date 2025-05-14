@@ -9,9 +9,9 @@ const port = process.env.PORT || 3000;
 // Set up Handlebars without layouts/partials
 app.engine('hbs', handlebars.engine({
   extname: 'hbs',
+  defaultLayout: false,
   layoutsDir: false,
-  partialsDir: false,
-  defaultLayout: false
+  partialsDir: path.join(__dirname, 'views', 'partials')  // <-- Add this
 }));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'public')); // Use public for .hbs files
@@ -57,13 +57,23 @@ app.use("/proxy-system", (req, res) => {
     .pipe(res);
 });
 
+// Serve homepage with index.hbs
+app.get('/', (req, res) => {
+  res.render('index', { title: 'GeoRail' });
+});
+
+// Serve /map and /system with maps.hbs
+app.get(['/map', '/system'], (req, res) => {
+  res.render('maps', { title: 'GeoRail Maps' });
+});
+
 // Render any .hbs file in /public by its name (e.g. /gallery -> gallery.hbs)
-app.get('/:page?', (req, res, next) => {
-  const page = req.params.page || 'index';
+app.get('/:page', (req, res, next) => {
+  const page = req.params.page;
   res.render(page, { title: 'GeoRail' }, (err, html) => {
     if (err) {
       if (err.message.includes('Failed to lookup view')) {
-        return res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
+        return res.status(404).render('404', { title: '404 Not Found' });
       }
       return next(err);
     }
@@ -73,7 +83,7 @@ app.get('/:page?', (req, res, next) => {
 
 // Custom 404 handler for all other unmatched routes
 app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
+  res.status(404).render('404', { title: '404 Not Found' });
 });
 
 // Export the app for Vercel
